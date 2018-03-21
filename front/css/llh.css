@@ -1,3 +1,15 @@
+*{
+	font-family: '微软雅黑';
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+.fabu{
+	padding:10px!important;
+}
 .pai{
 	max-width: 500px;
 	width: 100%;
@@ -6,14 +18,21 @@
 .pai div{
 	float: left;
 	width: 50%;
+	text-align: center;
+	margin-bottom: 10px;
 }
 .pop .biao{
 	text-align: center;
 	font-family: '微软雅黑';
 	margin-bottom: 70px;
+	font-size:20px;
+	font-weight: normal;
 }
 .pop p{
 	text-align: center;
+	color:#333;
+	font-size: 16px;
+
 }
 .pop{
 	position: relative;
@@ -25,6 +44,57 @@
     /*box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);*/
 }
 a{text-decoration: none;}
+.clear{
+	clear:both;
+}
+
+
+
+.le{
+	float: left;
+	font-size: 20px;
+}
+.ri{
+	float: right;
+	font-size: 20px;
+}
+.le a{
+	color:#333;
+}
+.form input{
+	display: block;
+	width: 100%;
+	border:none;
+	border-bottom: 1px solid #33333336;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+.form textarea{
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	border:none;
+}
+.title{
+	font-size:30px;
+
+}
+.con{
+	font-size: 18px;
+}
+.one{
+	border-bottom: 1px solid #33333336;
+	overflow: hidden;
+	padding:10px 0;
+}
+.form img{
+	text-align: center;
+	width: 200px;
+}
+.form p{
+	text-align: center;
+	margin: 20px 0;
+}
 .clear{
 	clear:both;
 }
