@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/fa-svg-with-js.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/llh.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <style>
+      .pop{
+        display: none;
+      }
+    </style>
+</head>
+<!-- 遮罩层 -->
+            <div class="pop">
+              <h3 class="biao">发布新的</h3>
+              <div class="pai">
+               <div>
+                  <a href="fawen.html" class="external">
+                    <img src="img/fa1.jpg" width="50%" />
+                    <p>文章</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="img/fa2.png" width="50%" />
+                    <p>图片</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="" >
+                    <img src="img/fa1.jpg" width="50%" />
+                    <p>音乐</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="img/fa2.png" width="50%" />
+                    <p>动态</p>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+<body>
+	<!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views whiteBGColor">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main whiteBGColor">
+        <!-- Top Navbar-->
+        <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+          	<div class="left">
+          		<a href="#" class="grayColor"><i class="fas fa-cog"></i></a>
+          	</div>
+            <div class="center sliding">我的</div>
+            <div class="right">
+              <a href="#" class="grayColor"><i class="fas fa-music"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through whiteBGColor">
+	        <div class="page-content">
+	        	    
+	        </div>
+	    </div>
+
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+              <a href="#" class="tab-link">
+                  <i class="icon fas fa-home fa-lg"></i>
+                  <span class="tabbar-label">首页</span>
+              </a>
+              <a href="find.html" class="tab-link">
+                  <i class="icon far fa-compass fa-lg"></i>
+                  <span class="tabbar-label">发现</span>
+              </a>
+              <a href="javascript:;" class="tab-link open-about click_pop">
+                  <i class="icon fas fa-plus-square fa-2x" style="color:Tomato"></i>  
+              </a>
+              <a href="community.html" class="tab-link">
+                  <i class="icon fas fa-bars fa-lg"></i>
+                  <span class="tabbar-label">社区</span>
+              </a>
+              <a href="my.html" class="tab-link">
+                  <i class="icon fas fa-user fa-lg" style="color:Tomato"></i>
+                  <span class="tabbar-label redColor">我的</span>
+              </a>
+          </div>
+        </div><!-- toolbar end -->
+      </div>
+     </div>
+
+	<script type="text/javascript">
+      $(function(){
+            $(".click_pop").click(function(){
+                $(".pop").show()
+                // $(".yaoqing").show()
+            })
+            $(".pop").click(function(){
+                $(".pop").hide()
+                // $(".tishi").show()
+            })
+        })
+    </script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+</body>
+</html>
