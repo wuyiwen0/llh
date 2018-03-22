@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/fa-svg-with-js.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/llh.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <style>
+      .pop{
+        display: none;
+      }
+    </style>
+</head>
+<!-- 遮罩层 -->
+            <div class="pop">
+              <h3 class="biao">发布新的</h3>
+              <div class="pai">
+               <div>
+                  <a href="fawen.html" class="external">
+                    <img src="img/fa1.jpg" width="50%" />
+                    <p>文章</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="img/fa2.png" width="50%" />
+                    <p>图片</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="" >
+                    <img src="img/fa1.jpg" width="50%" />
+                    <p>音乐</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="img/fa2.png" width="50%" />
+                    <p>动态</p>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+<body class="theme-red">
+<!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views whiteBGColor">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main whiteBGColor">
+      	<div class="pages navbar-fixed">
+		  <div data-page="home" class="page with-subnavbar">
+		    <div class="navbar">
+		      <div class="navbar-inner">
+			     <div class="left">
+	              <a href="#" style="color:#959595"><i class="fas fa-search"></i></a>
+	            </div>
+		        <div class="center">
+		        	<!-- 导航中可滑动的选项卡-->
+		          <div class="buttons-row">
+		            <!-- Link to 1st tab, active -->
+		            <a href="#tab1" class="button tab-link" style="border-style: none;">关注</a>
+		            <!-- Link to 2nd tab -->
+		            <a href="#tab2" class="button active tab-link" style="border-style: none;">推荐</a>
+		            <!-- Link to 3rd tab -->
+		            <a href="#tab3" class="button tab-link" style="border-style: none;">最新</a>
+		          </div><!-- 可滑动的选项卡 end-->
+		        </div>
+		        <div class="right">
+	              <a href="#" style="color:#959595"><i class="fas fa-music"></i></a>
+	            </div>
+		      </div>
+		    </div>
+		    <!-- Tabs swipeable wrapper, required to switch tabs with swipes -->
+		    <div class="tabs-swipeable-wrap">
+		      <!-- Tabs, tabs wrapper -->
+		      <div class="tabs">
+		        <!-- Tab 1, active by default -->
+		        <div id="tab1" class="page-content tab" style="padding-top:12%">
+		          <div class="content-block">
+		            <!-- ... 关注 content ... -->
+
+		          </div>
+		        </div>
+		        <!-- Tab 2 -->
+		        <div id="tab2" class="page-content tab active" style="padding:15% 0;">
+		            <!-- ... 推荐 content ... -->
+		            <div class="card demo-card-header-pic">
+					  <div style="background:url(img/1.jpg) center no-repeat;background-size:cover;height:160px" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+					  <div class="card-content">
+					    <div class="card-content-inner">
+					      <p class="color-gray">Posted on January 21, 2015</p>
+					      <p>Quisque eget vestibulum nulla...</p>
+					    </div>
+					  </div>
+					  <div class="card-footer">
+					    <a href="#" class="link">Like</a>
+					    <a href="#" class="link">Read more</a>
+					  </div>
+					</div><!--1-->
+					<div class="card demo-card-header-pic">
+					  <div style="background:url(img/1.jpg) center no-repeat;background-size:cover;height:160px" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+					  <div class="card-content">
+					    <div class="card-content-inner">
+					      <p class="color-gray">Posted on January 21, 2015</p>
+					      <p>Quisque eget vestibulum nulla...</p>
+					    </div>
+					  </div>
+					  <div class="card-footer">
+					    <a href="#" class="link">Like</a>
+					    <a href="#" class="link">Read more</a>
+					  </div>
+					</div><!--2-->
+					<div class="card demo-card-header-pic">
+					  <div style="background:url(img/1.jpg) center no-repeat;background-size:cover;height:160px" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+					  <div class="card-content">
+					    <div class="card-content-inner">
+					      <p class="color-gray">Posted on January 21, 2015</p>
+					      <p>Quisque eget vestibulum nulla...</p>
+					    </div>
+					  </div>
+					  <div class="card-footer">
+					    <a href="#" class="link">Like</a>
+					    <a href="#" class="link">Read more</a>
+					  </div>
+					</div><!--2-->
+		        </div>
+		        <!-- Tab 3 -->
+		        <div id="tab3" class="page-content tab" style="padding:15% 0">
+		          <!-- <div class="content-block"> -->
+		            <!-- ... 最新 content ... -->
+		            <div class="card facebook-card">
+					  <div class="card-header no-border">
+					    <div class="facebook-avatar"><img src="img/2.jpg" width="34" height="34"></div>
+					    <div class="facebook-name">John Doe</div>
+					    <div class="facebook-date">Monday at 3:47 PM</div>
+					  </div>
+					  <div class="card-content"><img src="img/2.jpg" width="100%"></div>
+					  <div class="card-footer no-border">
+					    <a href="#" class="link">Like</a>
+					    <a href="#" class="link">Comment</a>
+					    <a href="#" class="link">Share</a>
+					  </div>
+					</div>
+					 
+					<div class="card facebook-card">
+					  <div class="card-header">
+					    <div class="facebook-avatar"><img src="img/2.jpg" width="34" height="34"></div>
+					    <div class="facebook-name">John Doe</div>
+					    <div class="facebook-date">Monday at 2:15 PM</div>
+					  </div>
+					  <div class="card-content">
+					    <div class="card-content-inner">
+					      <p>What a nice photo i took yesterday!</p>
+					      <img src="img/2.jpg" width="100%">
+					      <p class="color-gray">Likes: 112    Comments: 43</p>
+					    </div>
+					  </div>
+					  <div class="card-footer">
+					    <a href="#" class="link">Like</a>
+					    <a href="#" class="link">Comment</a>
+					    <a href="#" class="link">Share</a>
+					  </div>
+					</div> <!--2-->  
+		          <!-- </div> -->
+		        </div>
+		      </div>
+		    </div><!--end-->
+		  </div>
+		</div>
+		<!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+              <a href="index.html" class="external tab-link">
+                  <i class="icon fas fa-home fa-lg"></i>
+                  <span class="tabbar-label">首页</span>
+              </a>
+              <a href="find.html" class="external tab-link">
+                  <i class="icon far fa-compass fa-lg" style="color:Tomato"></i>
+                  <span class="tabbar-label redColor">发现</span>
+              </a>
+              <a href="javascript:;" class="tab-link open-about click_pop">
+                  <i class="icon fas fa-plus-square fa-2x" style="color:Tomato"></i>  
+              </a>
+              <a href="community.html" class="external tab-link">
+                  <i class="icon fas fa-bars fa-lg"></i>
+                  <span class="tabbar-label">社区</span>
+              </a>
+              <a href="my.html" class="external tab-link">
+                  <i class="icon fas fa-user fa-lg"></i>
+                  <span class="tabbar-label">我的</span>
+              </a>
+          </div>
+        </div><!-- toolbar end -->
+      </div>
+    </div>
+
+	<script type="text/javascript">
+      $(function(){
+            $(".click_pop").click(function(){
+                $(".pop").show()
+                // $(".yaoqing").show()
+            })
+            $(".pop").click(function(){
+                $(".pop").hide()
+                // $(".tishi").show()
+            })
+        })
+    </script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+    <script>var myApp = new Framework7();            </script>
+</body>
+</html>
