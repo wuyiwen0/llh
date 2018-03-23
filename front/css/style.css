@@ -91,6 +91,24 @@ padding: 15px 10px;
 .redColor{
 	color: #ea4027;
 }
+.blackColor{
+	color: #212121;
+}
+/*********
+*文本居中
+*********/
+.textCenter{
+	text-align:center;
+}
+/*
+my.html页
+下边框设置
+*/
+.borderBom{
+	border-bottom-style:solid;
+	border-width:thin;
+	border-color: #E0E0E0;
+}
 /*********
 *圆形图片
 *********/
