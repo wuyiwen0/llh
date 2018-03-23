@@ -2,11 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>音乐播放</title>
+	<!-- Path to Framework7 Library CSS-->
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/audio.css">
+	</style>
 </head>
 <body>
+	<!-- 返回栏 -->
+	<!-- <div class="returnP">
+		
+	</div> -->
+	<!-- 原音乐播放页 -->
 	<div class="page_wrapper">
 		<div class="song_wrap">
 			<div class="song_poster">
@@ -33,7 +45,9 @@
 			<span class="end_time">00:00</span>
 		</div>
 	</div>
+	<!-- 原音乐播放页end -->
 	<audio src="music/xiao_xing_yun.mp3" id="audio"></audio>
 	<script src="js/audio.js"></script>
+	<!-- Path to Framework7 Library JS-->
 </body>
 </html>
