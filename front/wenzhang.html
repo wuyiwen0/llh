@@ -8,15 +8,32 @@
     <title>My App</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/llh.css">
+     <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/fa-svg-with-js.css">
     <script type="text/javascript" src="js/jquery.js"></script>
+     <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
     <style>
     </style>
   </head>
   <body>
+  <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+            <div class="left">
+                <a href="javascript:history.go(-1)" class="external grayColor"><i class="fas fa-angle-left "></i></a>
+            </div>
+            <div class="center sliding">文章列表</div>
+            <div class="right">
+                
+            </div>
+          </div>
+        </div>
      <div id="js_plugins" style="visibility: visible;">
       <div class="article_list js_plugin" id="namespace_0" data-pid="3">
   
-  <a class="list_item js_post" href="">
+  <a class="list_item js_post" href="wenxiang.html">
     <div class="cover">
       <img class="img js_img" src="img/wenzhang1.jpg" alt="">
     </div>
@@ -26,7 +43,7 @@
     </div>
   </a>
   
-  <a class="list_item js_post" href="">
+  <a class="list_item js_post" href="wenxiang.html">
     <div class="cover">
       <img class="img js_img" src="img/wenzhang2.jpg" alt="">
     </div>
@@ -37,7 +54,7 @@
     </div>
   </a>
   
-  <a class="list_item js_post" href="">
+  <a class="list_item js_post" href="wenxiang.html">
     <div class="cover">
       <img class="img js_img" src="img/wenzhang3.jpg" alt="">
     </div>
@@ -47,7 +64,7 @@
     </div>
   </a>
   
-  <a class="list_item js_post" href="">
+  <a class="list_item js_post" href="wenxiang.html">
     <div class="cover">
       <img class="img js_img" src="img/wenzhang4.jpg" alt="">
     </div>
@@ -57,7 +74,7 @@
     </div>
   </a>
   
-  <a class="list_item js_post" href="">
+  <a class="list_item js_post" href="wenxiang.html">
     <div class="cover">
       <img class="img js_img" src="img/wenzhang5.jpg" alt="">
     </div>
@@ -70,5 +87,30 @@
   
 </div>
     </div>
+    <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels" style="position:fixed;bottom:0;">
+          <div class="toolbar-inner">
+              <a href="#" class="tab-link active">
+                  <i class="icon fas fa-home fa-lg" style="color:Tomato"></i>
+                  <span class="tabbar-label redColor">首页</span>
+              </a>
+              <a href="find.html" class="tab-link">
+                  <i class="icon far fa-compass fa-lg"></i>
+                  <span class="tabbar-label">发现</span>
+              </a>
+              <a href="javascript:;" class="tab-link open-about click_pop">
+                  <i class="icon fas fa-plus-square fa-2x" style="color:Tomato"></i>  
+              </a>
+              <a href="community.html" class="tab-link">
+                  <i class="icon fas fa-bars fa-lg"></i>
+                  <span class="tabbar-label">社区</span>
+              </a>
+              <a href="my.html" class="tab-link">
+                  <i class="icon fas fa-user fa-lg"></i>
+                  <span class="tabbar-label">我的</span>
+              </a>
+          </div>
+        </div><!-- toolbar end -->
+        
   </body>
 </html>

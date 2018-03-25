@@ -6,19 +6,35 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>My App</title>
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/fa-svg-with-js.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/llh.css">
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
     <style>
     </style>
   </head>
   <body>
   
      <div class="tab_bd">
-        
+        <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+            <div class="left">
+                <a href="javascript:history.go(-1)" class="external grayColor"><i class="fas fa-angle-left "></i></a>
+            </div>
+            <div class="center sliding">图片列表</div>
+            <div class="right">
+                
+            </div>
+          </div>
+        </div>
         <div class="article_list article_list_0">
             
-            <a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484947&amp;idx=3&amp;sn=d12fe909eb989c6b893231f382b93c66&amp;scene=19#wechat_redirect">
+            <a class="list_item js_post" href="tuxiang.html">
                 <div class="cover">
                     <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7dYCibibawhkBS0WQhPs5HQUI9EGkYaqc1uoia0GTZNqIgicwOvID0GlRXOgopibISZBZ7HsurZK8DFauTw/0" alt="">
                 </div>
@@ -28,7 +44,7 @@
                 </div>
             </a>
             
-            <a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484896&amp;idx=3&amp;sn=feb250d9ba6ced5677f79031e26b8d94&amp;scene=19#wechat_redirect">
+            <a class="list_item js_post" href="tuxiang.html">
                 <div class="cover">
                     <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7dZQhIyw6t2sQ1Wruo2yYc1fkXf0zLQAJXkpp4qc0GnA4ZzGXQZVHftELXVB9vRltoqVVUoa47HCIA/0" alt="">
                 </div>
@@ -38,7 +54,7 @@
                 </div>
             </a>
             
-            <a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484710&amp;idx=3&amp;sn=7450ddc336ba60267a2506cc9d5022cb&amp;scene=19#wechat_redirect">
+            <a class="list_item js_post" href="tuxiang.html">
                 <div class="cover">
                     <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7dbsTQ9tHH5LtBpXFaHua8IJALiau6qrGPiaKSEj8j4lfOlZqOxIpUnz0icDKPckC800qOXegbdbgINKg/0" alt="">
                 </div>
@@ -48,7 +64,7 @@
                 </div>
             </a>
             
-            <a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484500&amp;idx=1&amp;sn=96a4eae1fb52f6563fdfd685992e0231&amp;scene=19#wechat_redirect">
+            <a class="list_item js_post" href="tuxiang.html">
                 <div class="cover">
                     <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7dYfvFoGJppF4PoU6xqWuK32Ao6iaFElDQoA6RSOKRhiae4PhBnpJvFNy9dwtia1ZTqoGicZwjaCQpsl3A/0" alt="">
                 </div>
@@ -58,7 +74,7 @@
                 </div>
             </a>
             
-            <a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484431&amp;idx=1&amp;sn=6217e4a47914f2939e549cc903c120d3&amp;scene=19#wechat_redirect">
+            <a class="list_item js_post" href="tuxiang.html">
                 <div class="cover">
                     <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7dZWuZ9UFh4WX4iaHhviaj2NARJTPzias1icyN2up5AucX8A7Eb7S5GImEhmkgAvaVc62FLvlzNqvoLjmw/0" alt="">
                 </div>
@@ -67,52 +83,33 @@
                     <p class="desc">此时的心情很蓝就对了</p>
                 </div>
             </a>
-            
-        <a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484415&amp;idx=1&amp;sn=beb0c0eb3344a518bbe8383a8b82aed3&amp;scene=19#wechat_redirect">
-                <div class="cover">
-                    <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7daC1E8uLsQ5FItRDDoX4VK5PMia0zyIHvUdVsIej9joBvy1Ylft5zjiajwkKYLtTlffYIqhFyMeK5iaw/0" alt="">
-                </div>
-                <div class="cont">
-                    <h2 class="title js_title">壁纸   |  这是一封没有主题的壁纸，请查收！</h2>
-                    <p class="desc">什么乱七八糟的 噗哈哈哈</p>
-                </div>
-            </a><a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484398&amp;idx=1&amp;sn=2e5ebae65f09ee0210169259417e57dd&amp;scene=19#wechat_redirect">
-                <div class="cover">
-                    <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7daf4LNT88c5ARar4WGzV0jz77v354ibmx9yo6ICF6icEtxHlGRvlmtvymHLOKe78Uic6vHE17phia1R6w/0" alt="">
-                </div>
-                <div class="cont">
-                    <h2 class="title js_title">壁纸   |   pink心炸裂！！！</h2>
-                    <p class="desc">封面有点基 点开需谨慎！</p>
-                </div>
-            </a><a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484268&amp;idx=1&amp;sn=20698925dd1c805219309c8fc6b2444c&amp;scene=19#wechat_redirect">
-                <div class="cover">
-                    <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7dZTtDbiaqe6cib2ujroXmUH9W0n7SiasHEj1Sibk8KfUypbOY7JSJr9uqPIJ9XwXW8I73fNibPvzsdrz3Q/0" alt="">
-                </div>
-                <div class="cont">
-                    <h2 class="title js_title">壁纸   |   爱上一个人 恋上一座城</h2>
-                    <p class="desc">我来到你的城市 走过你来时的路</p>
-                </div>
-            </a><a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484245&amp;idx=2&amp;sn=a8e0899460fb510d98a46a13a23cd182&amp;scene=19#wechat_redirect">
-                <div class="cover">
-                    <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7dZHRDIfUgVia6XUlpWavRlUicQINjMW3g4SQTeXlConnibviaFj6etudJtHaSicgUSqXLYZJwTNxz9IqYA/0" alt="">
-                </div>
-                <div class="cont">
-                    <h2 class="title js_title">壁纸   |   色彩</h2>
-                    <p class="desc">colorful world</p>
-                </div>
-            </a><a class="list_item js_post" href="http://mp.weixin.qq.com/s?__biz=MzUxMDE4MTA1Mw==&amp;mid=2247484044&amp;idx=2&amp;sn=df4fe508a28ee53241f997dc2959a550&amp;scene=19#wechat_redirect">
-                <div class="cover">
-                    <img class="img js_img" src="http://mmbiz.qpic.cn/mmbiz_jpg/6wFeUZnN7dY18AWpNFGePZfcM33NkehcBibuanqoEpcRwgaeuhueJjTFxO47fvC8Z9pibaGdGtNFia05LT2zajHibw/0" alt="">
-                </div>
-                <div class="cont">
-                    <h2 class="title js_title">壁纸HD  |  星空（请在WiFi下打开）</h2>
-                    <p class="desc">建议在WiFi下打开，因为文件实在太大了</p>
-                </div>
-            </a></div>
-        
-        <div class="article_list article_list_1" style="display: none;">
+       
             
         </div>
+         <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels" style="position:fixed;bottom:0;">
+          <div class="toolbar-inner">
+              <a href="#" class="tab-link active">
+                  <i class="icon fas fa-home fa-lg" style="color:Tomato"></i>
+                  <span class="tabbar-label redColor">首页</span>
+              </a>
+              <a href="find.html" class="tab-link">
+                  <i class="icon far fa-compass fa-lg"></i>
+                  <span class="tabbar-label">发现</span>
+              </a>
+              <a href="javascript:;" class="tab-link open-about click_pop">
+                  <i class="icon fas fa-plus-square fa-2x" style="color:Tomato"></i>  
+              </a>
+              <a href="community.html" class="tab-link">
+                  <i class="icon fas fa-bars fa-lg"></i>
+                  <span class="tabbar-label">社区</span>
+              </a>
+              <a href="my.html" class="tab-link">
+                  <i class="icon fas fa-user fa-lg"></i>
+                  <span class="tabbar-label">我的</span>
+              </a>
+          </div>
+        </div><!-- toolbar end -->
         
     </div>
   </body>

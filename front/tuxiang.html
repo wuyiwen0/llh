@@ -8,11 +8,28 @@
     <title>My App</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/llh.css">
+     <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/fa-svg-with-js.css">
     <script type="text/javascript" src="js/jquery.js"></script>
+     <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
     <style>
     </style>
   </head>
   <body>
+  <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+            <div class="left">
+                <a href="javascript:history.go(-1)" class="external grayColor"><i class="fas fa-angle-left "></i></a>
+            </div>
+            <div class="center sliding">图片详情</div>
+            <div class="right">
+                
+            </div>
+          </div>
+        </div>
   <div class="rich_media_inner">
                         
         
@@ -48,7 +65,31 @@
              </div>   
         </div>
     </div>
-     
+     <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels" style="position:fixed;bottom:0;">
+          <div class="toolbar-inner">
+              <a href="#" class="tab-link active">
+                  <i class="icon fas fa-home fa-lg" style="color:Tomato"></i>
+                  <span class="tabbar-label redColor">首页</span>
+              </a>
+              <a href="find.html" class="tab-link">
+                  <i class="icon far fa-compass fa-lg"></i>
+                  <span class="tabbar-label">发现</span>
+              </a>
+              <a href="javascript:;" class="tab-link open-about click_pop">
+                  <i class="icon fas fa-plus-square fa-2x" style="color:Tomato"></i>  
+              </a>
+              <a href="community.html" class="tab-link">
+                  <i class="icon fas fa-bars fa-lg"></i>
+                  <span class="tabbar-label">社区</span>
+              </a>
+              <a href="my.html" class="tab-link">
+                  <i class="icon fas fa-user fa-lg"></i>
+                  <span class="tabbar-label">我的</span>
+              </a>
+          </div>
+        </div><!-- toolbar end -->
+        
              
   </body>
 </html>
