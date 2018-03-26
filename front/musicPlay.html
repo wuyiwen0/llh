@@ -1,53 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, minimal-ui">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<title>音乐播放</title>
-	<!-- Path to Framework7 Library CSS-->
-
-    <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/audio.css">
-	</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>My App</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="css/fa-svg-with-js.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<!-- 返回栏 -->
-	<!-- <div class="returnP">
-		
-	</div> -->
-	<!-- 原音乐播放页 -->
-	<div class="page_wrapper">
-		<div class="song_wrap">
-			<div class="song_poster">
-				<img src="img/poster.jpg" alt="">
-			</div>
-			<div class="song_content">
-				<p class="name">小幸运</p>
-				<p class="singer">田馥甄</p>
-			</div>
-			<div class="song_handle">
-				<i></i>
-			</div>
-		</div>
-		<div class="lyric_content">
-			<div class="lyric" id="lyric">
-				lyric loading...
-			</div>
-		</div>
-		<div class="progressbar">
-			<span class="start_time">00:00</span>
-			<div class="progress">
-				<p class="current"><span class="btn_handle"></span></p>
-			</div>
-			<span class="end_time">00:00</span>
-		</div>
+	<!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views whiteBGColor">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main whiteBGColor">
+        <!-- Top Navbar-->
+        <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+          	<div class="left">
+          		<a href="javascript:history.go(-1)" class="external blackColor"><i class="fas fa-angle-left fa-lg"></i></a>
+          	</div>
+            <div class="center row">
+            	<div class="row">Rolling in the deep&nbsp;</div>
+            	<div class="row font16 grayColor"> -- Adele</div>
+            </div>
+            <div class="right">
+            </div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through whiteBGColor">
+	        <div class="page-content">
+	        	<!-- 音乐封面 -->
+		        <div class="row" style="padding-top:10%">
+		        	<div class="col-10"></div>
+		        	<div class="col-80">
+		        		<img src="img/Adele.jpg" width="100%" >
+		        	</div>
+		        	<div class="col-10"></div>
+		        </div>
+		        <!-- 播放控制区 -->
+		        <div class="row">
+		        	
+		        </div>
+		        <!-- 播放控制区 End-->
+	        </div>
+	        
+	    </div>
+	  </div>
 	</div>
-	<!-- 原音乐播放页end -->
-	<audio src="music/xiao_xing_yun.mp3" id="audio"></audio>
-	<script src="js/audio.js"></script>
-	<!-- Path to Framework7 Library JS-->
+
+<!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
 </body>
 </html>
