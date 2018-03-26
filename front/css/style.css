@@ -91,6 +91,9 @@ padding: 15px 10px;
 .grayColor{
 	color: #959595;
 }
+.bgColor{
+	color: #333;
+}
 .redColor{
 	color: #ea4027;
 }
@@ -130,3 +133,11 @@ my.html页
 /*********
 *音乐播放
 *********/
+
+
+/*********
+*居中设置
+*********/
+.textCenter{
+	text-align: center;
+}
