@@ -1,63 +1,46 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <title>My App</title>
-  <!-- Path to Framework7 Library CSS-->
-  <link rel="stylesheet" href="css/framework7.ios.min.css">
-  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <title>音乐详情</title>
+  <link rel="stylesheet" href="css/audio.css">
   <link rel="stylesheet" href="css/fa-svg-with-js.css">
-  <!-- Path to your custom app styles-->
-  <link rel="stylesheet" href="css/style.css">
+   <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+
 </head>
 <body>
-	<!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar-overlay"></div>
-    <!-- Views-->
-    <div class="views whiteBGColor">
-      <!-- Your main view, should have "view-main" class-->
-      <div class="view view-main whiteBGColor">
-        <!-- Top Navbar-->
-        <div class="navbar whiteBGColor">
-          <div class="navbar-inner">
-          	<div class="left">
-          		<a href="javascript:history.go(-1)" class="external blackColor"><i class="fas fa-angle-left fa-lg"></i></a>
-          	</div>
-            <div class="center row">
-            	<div class="row">Rolling in the deep&nbsp;</div>
-            	<div class="row font16 grayColor"> -- Adele</div>
-            </div>
-            <div class="right">
-            </div>
-          </div>
-        </div>
-        <div class="pages navbar-through toolbar-through whiteBGColor">
-	        <div class="page-content">
-	        	<!-- 音乐封面 -->
-		        <div class="row" style="padding-top:10%">
-		        	<div class="col-10"></div>
-		        	<div class="col-80">
-		        		<img src="img/Adele.jpg" width="100%" >
-		        	</div>
-		        	<div class="col-10"></div>
-		        </div>
-		        <!-- 播放控制区 -->
-		        <div class="row">
-		        	
-		        </div>
-		        <!-- 播放控制区 End-->
-	        </div>
-	        
-	    </div>
-	  </div>
-	</div>
+  <div class="page_wrapper">
+    <div class="song_wrap">
+      <!-- <div class="song_poster">
+        <img src="images/poster.jpg" alt="">
+      </div> -->
+      <div class="song_content">
+        <span style="float:left"><a href="javascript:history.go(-1)" class="external blackColor"><i class="fas fa-angle-left fa-lg biao"></i></a></span>
+        <span class="name">小幸运&nbsp;</span>
+        <span class="singer"> --  田馥甄 &nbsp;</span>
+      </div>
+      
+    </div>
+    
+    <div class="feng"><img src="img/Adele.jpg" width="100%" ></div>
+    <div class="progressbar">
+      <span class="start_time">00:00</span>
+      <div class="progress">
+        <p class="current"><span class="btn_handle"></span></p>
+      </div>
+      <span class="end_time">00:00</span>
 
-<!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
-    <script type="text/javascript" src="js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+      
+    </div>
+    <!-- 开关 -->
+     <div class="song_handle" style="text-align:center">
+        <i></i>
+    </div>
+   
+  </div>
+  <audio src="music/xiao_xing_yun.mp3" id="audio"></audio>
+  <script src="js/audio.js"></script>
 </body>
 </html>
