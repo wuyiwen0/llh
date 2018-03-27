@@ -81,21 +81,44 @@
           <!-- Page, data-page contains page name-->
           <div data-page="index" class="page">
             <div class="page-content">
-              <!-- banner图           -->
-            <a href=""><img width="100%" src="img/1.jpg"/></a>
-           
+              <!-- banner图     -->
+              <div class="swiper-container swiper-1">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <span>
+                      <img src="img/iu1.jpg" width="100%" class="imgW">
+                    </span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span>
+                      <img src="img/1.jpg" width="100%" class="imgW">
+                    </span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span>
+                      <img src="img/iu2.jpg" width="100%" class="imgW">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- banner图  end   -->
               <!-- 卡片列表1 -->
               <div class="card facebook-card">
                 <div class="card-header">
-                  <div class="facebook-avatar"><img src="img/2.jpg" width="34" height="34"></div>
-                  <div class="facebook-name">John Doe</div>
-                  <div class="facebook-date">Monday at 2:15 PM</div>
+                  <div class="fb">
+                    <div class="facebook-avatar">
+                      <img src="img/2.jpg" width="34" height="34">
+                    </div>
+                    <div class="facebook-name" style="font-size:16px">John Doe</div>
+                    <div class="facebook-date">Monday at 2:15 PM</div>
+                  </div>
+                  <a href="#" class="button followBtn" style="color:Tomato;border-color: #FF5722;">关注</a>
                 </div>
                 <div class="card-content">
                   <div class="card-content-inner">
-                    <p>What a nice photo i took yesterday!</p>
-                    <img src="img/2.jpg" width="100%">
-                    <p class="color-gray">Likes: 112    Comments: 43</p>
+                    <p class="font16">What a nice photo i took yesterday!</p>
+                    <img src="img/1.jpg" width="280" height="140">
                   </div>
                 </div>
                 <div class="card-footer">
@@ -108,9 +131,14 @@
               <!-- 卡片列表2 -->
               <div class="card facebook-card">
                 <div class="card-header">
-                  <div class="facebook-avatar"><img src="img/2.jpg" width="34" height="34"></div>
-                  <div class="facebook-name">John Doe</div>
-                  <div class="facebook-date">Monday at 2:15 PM</div>
+                  <div class="fb">
+                    <div class="facebook-avatar">
+                      <img src="img/2.jpg" width="34" height="34">
+                    </div>
+                    <div class="facebook-name" style="font-size:16px">John Doe</div>
+                    <div class="facebook-date">Monday at 2:15 PM</div>
+                  </div>
+                  <a href="#" class="button followBtn" style="color:Tomato;border-color: #FF5722;">关注</a>
                 </div>
                 <div class="card-content">
                   <div class="card-content-inner">
@@ -204,6 +232,19 @@
             $$('#autocomplete-standalone-popup').find('input').val(value[0]);
         }
       });
+      //幻灯片 1 Slide Per View, 50px Between
+      var mySwiper1 = myApp.swiper('.swiper-1', {
+        pagination:'.swiper-1 .swiper-pagination',
+        spaceBetween: 50,
+        speed:500
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //banner幻灯大小
+        var imgWidth = $(".imgW").width();
+        $(".imgW").height(imgWidth*0.5);
+      })
     </script>
   </body>
 </html>
