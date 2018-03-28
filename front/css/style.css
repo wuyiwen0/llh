@@ -141,3 +141,30 @@ my.html页
 .textCenter{
 	text-align: center;
 }
+/*********
+*音乐进度条
+*********/
+#rateSpace{
+/*position:relative;*/
+	width:100%;
+	height:5px;
+	top:-5px;
+	background-color:  #bdbdbd;
+	margin-top: 17%
+}
+#musicRate{
+	float: left;
+	z-index:10px;
+	height: 5px;
+	background-color: #FF5722;
+	border-right:2px solid  #FF5722;
+}
+#rateId{
+
+}
+#starTime{
+	margin-top: 10%
+}
+#endTime{
+margin-top: 10%
+}
