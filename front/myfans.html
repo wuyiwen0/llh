@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>My App</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="css/fa-svg-with-js.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views whiteBGColor">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main whiteBGColor">
+        <!-- Top Navbar-->
+        <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+          	<div class="left">
+          		<a href="javascript:history.go(-1)" class="external blackColor"><i class="fas fa-angle-left fa-lg"></i><span> 我</span></a>
+          	</div>
+            <div class="center sliding">我的粉丝</div>
+            <div class="right">
+            	<a href="" class="redColor"></a>
+            </div>
+            <!-- Sub navbar -->
+            <div class="subnavbar">
+              <!-- Search Bar -->
+              <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+                <div class="searchbar-input">
+                  <input type="search" placeholder="搜索我的粉丝"><a href="#" class="searchbar-clear"></a>
+                </div><a href="#" class="searchbar-cancel grayColor">取消</a>
+              </form>
+              <!-- Search Bar overlay -->
+              <div class="searchbar-overlay"></div>
+            </div>
+            <!-- Sub navbar End-->
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through whiteBGColor" style="margin-top:8%">
+	        <div class="page-content">
+            <!-- 可滑动列表 -->
+            <div class="list-block">
+              <ul>
+                <li class="swipeout">
+                  <div class="swipeout-content item-content">
+                    <div class="item-media">
+                      <img src="img/iu23.jpg" width="44" style="border-radius:50%" class="userImg">
+                    </div>
+                    <div class="item-inner">
+                      这是一个用户名
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="action1 bg-orange">关注</a>
+                    <a href="#" class="action2">加入黑名单</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content item-content">
+                    <div class="item-media">
+                      <img src="img/iu23.jpg" width="44" style="border-radius:50%" class="userImg">
+                    </div>
+                    <div class="item-inner">
+                      这是一个用户名
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="action1 bg-orange">关注</a>
+                    <a href="#" class="action2">加入黑名单</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content item-content">
+                    <div class="item-media">
+                      <img src="img/iu23.jpg" width="44" style="border-radius:50%" class="userImg">
+                    </div>
+                    <div class="item-inner">
+                      这是一个用户名
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="action1 bg-orange">关注</a>
+                    <a href="#" class="action2">加入黑名单</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content item-content">
+                    <div class="item-media">
+                      <img src="img/iu23.jpg" width="44" style="border-radius:50%" class="userImg">
+                    </div>
+                    <div class="item-inner">
+                      这是一个用户名
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="action1 bg-orange">关注</a>
+                    <a href="#" class="action2">加入黑名单</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content item-content">
+                    <div class="item-media">
+                      <img src="img/iu23.jpg" width="44" style="border-radius:50%" class="userImg">
+                    </div>
+                    <div class="item-inner">
+                      这是一个用户名
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="action1 bg-orange">关注</a>
+                    <a href="#" class="action2">加入黑名单</a>
+                  </div>
+                </li>
+                <li class="swipeout">
+                  <div class="swipeout-content item-content">
+                    <div class="item-media">
+                      <img src="img/iu23.jpg" width="44" style="border-radius:50%" class="userImg">
+                    </div>
+                    <div class="item-inner">
+                      这是一个用户名
+                    </div>
+                  </div>
+                  <div class="swipeout-actions-right">
+                    <a href="#" class="action1 bg-orange">关注</a>
+                    <a href="#" class="action2">加入黑名单</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 可滑动列表end -->
+	        </div>
+	    </div>
+	  </div>
+	</div>
+
+<!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+    <script>var myApp = new Framework7();            </script>
+</body>
+</html>
