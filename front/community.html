@@ -21,37 +21,36 @@
     </style>
 </head>
 <!-- 遮罩层 -->
-            <div class="pop">
-              <h3 class="biao">发布新的</h3>
-              <div class="pai">
-               <div>
-                  <a href="fawen.html" class="external">
-                    <img src="img/fa1.jpg" width="50%" />
-                    <p>文章</p>
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="img/fa2.png" width="50%" />
-                    <p>图片</p>
-                  </a>
-                </div>
-                <div>
-                  <a href="" >
-                    <img src="img/fa1.jpg" width="50%" />
-                    <p>音乐</p>
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="img/fa2.png" width="50%" />
-                    <p>动态</p>
-                  </a>
-                </div>
-
-              </div>
-            </div>
-<body class="theme-red">
+<div class="pop">
+  <h3 class="biao">发布新的</h3>
+  <div class="pai">
+   <div>
+      <a href="fawen.html" class="external">
+        <img src="img/fa1.jpg" width="50%" />
+        <p>文章</p>
+      </a>
+    </div>
+    <div>
+      <a href="" class="external">
+        <img src="img/fa2.png" width="50%" />
+        <p>图片</p>
+      </a>
+    </div>
+    <div>
+      <a href="musicPublish.html" class="external">
+        <img src="img/fa1.jpg" width="50%" />
+        <p>音乐</p>
+      </a>
+    </div>
+    <div>
+      <a href="communityPublish.html" class="external">
+        <img src="img/fa2.png" width="50%" />
+        <p>动态</p>
+      </a>
+    </div>
+  </div>
+</div>
+<body class="theme-gray">
 <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar-overlay"></div>
     <!-- Views-->
@@ -63,7 +62,11 @@
 		    <div class="navbar">
 		      <div class="navbar-inner">
 			     <div class="left">
-	              <a href="#" style="color:#959595"><i class="fas fa-search"></i></a>
+	              	<a href="#" id="autocomplete-standalone-popup" class="grayColor autocomplete-opener">
+		              <i class="fas fa-search">
+		                <div class="item-after"></div>
+		              </i>
+	            	</a> 
 	            </div>
 		        <div class="center">
 		        	<!-- 导航中可滑动的选项卡-->
@@ -77,7 +80,7 @@
 		          </div><!-- 可滑动的选项卡 end-->
 		        </div>
 		        <div class="right">
-	              <a href="musicPlay.html" style="color:#959595"><i class="fas fa-music"></i></a>
+	              <a href="musicPlay.html" class="external" style="color:#959595"><i class="fas fa-music"></i></a>
 	            </div>
 		      </div>
 		    </div>
@@ -321,6 +324,34 @@
     <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
-    <script>var myApp = new Framework7();            </script>
+    <script>
+	    // 搜索弹出搜索框
+	    var myApp = new Framework7();            
+	    var $$ = Dom7;
+	    var autocompleteStandalonePopup = myApp.autocomplete({
+	      openIn: 'popup', //open in popup
+	      opener: $$('#autocomplete-standalone-popup'), //link that opens autocomplete
+	      backOnSelect: true, //go back after we select something
+	      source: function (autocomplete, query, render) {
+	          var results = [];
+	          if (query.length === 0) {
+	              render(results);
+	              return;
+	          }
+	          // Find matched items
+	          for (var i = 0; i < fruits.length; i++) {
+	              if (fruits[i].toLowerCase().indexOf(query.toLowerCase()) >= 0) results.push(fruits[i]);
+	          }
+	          // Render items by passing array with result items
+	          render(results);
+	      },
+	      onChange: function (autocomplete, value) {
+	          // Add item text value to item-after
+	          $$('#autocomplete-standalone-popup').find('.item-after').text(value[0]);
+	          // Add item value to input value
+	          $$('#autocomplete-standalone-popup').find('input').val(value[0]);
+	      }
+	    });
+  	</script>
 </body>
 </html>

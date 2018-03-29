@@ -20,144 +20,186 @@
       }
     </style>
 </head>
-<body>
+<body class="theme-gray">
 	<!-- 遮罩层 -->
-    <div class="pop">
-      <h3 class="biao">发布新的</h3>
-      <div class="pai">
-       <div>
-          <a href=""
-          <img src="" />
-          <p>文章</p></a>
-        </div>
-        <div>
-          <a href=""
-          <img src="" />
-          <p>文章</p></a>
-        </div>
-        <div>
-          <a href=""
-          <img src="" />
-          <p>文章</p></a>
-        </div>
-        <div>
-          <a href=""
-          <img src="" />
-          <p>文章</p></a>
-        </div>
-
+  <div class="pop">
+    <h3 class="biao">发布新的</h3>
+    <div class="pai">
+     <div>
+        <a href="fawen.html" class="external">
+          <img src="img/fa1.jpg" width="50%" />
+          <p>文章</p>
+        </a>
+      </div>
+      <div>
+        <a href="" class="external">
+          <img src="img/fa2.png" width="50%" />
+          <p>图片</p>
+        </a>
+      </div>
+      <div>
+        <a href="musicPublish.html" class="external">
+          <img src="img/fa1.jpg" width="50%" />
+          <p>音乐</p>
+        </a>
+      </div>
+      <div>
+        <a href="communityPublish.html" class="external">
+          <img src="img/fa2.png" width="50%" />
+          <p>动态</p>
+        </a>
       </div>
     </div>
-    <!-- 遮罩层end -->
+  </div>
+  <!-- 遮罩层end -->
 	<!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar-overlay"></div>
-    <!-- Views-->
-    <div class="views whiteBGColor">
-      <!-- Your main view, should have "view-main" class-->
-      <div class="view view-main whiteBGColor">
-        <!-- Top Navbar-->
-        <div class="navbar whiteBGColor">
-          <div class="navbar-inner">
-            <!-- We have home navbar without left link-->
-            <div class="left">
-              <a href="#" class="grayColor"><i class="fas fa-search"></i></a>
-            </div>
-            <div class="center sliding">发现</div>
-            <div class="right">
-              <a href="musicPlay.html" class="grayColor"><i class="fas fa-music"></i></a>
-            </div>
+  <div class="statusbar-overlay"></div>
+  <!-- Views-->
+  <div class="views whiteBGColor">
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main whiteBGColor">
+      <!-- Top Navbar-->
+      <div class="navbar whiteBGColor">
+        <div class="navbar-inner">
+          <!-- We have home navbar without left link-->
+          <div class="left">
+            <a href="#" id="autocomplete-standalone-popup" class="grayColor autocomplete-opener">
+              <i class="fas fa-search">
+                <div class="item-after"></div>
+              </i>
+            </a>          
+          </div>
+          <div class="center sliding">发现</div>
+          <div class="right">
+            <a href="musicPlay.html" class="external grayColor"><i class="fas fa-music"></i></a>
           </div>
         </div>
-        <div class="pages navbar-through toolbar-through whiteBGColor">
-	        <div class="page-content">
-	        	<div class="list-block">
-    				  <ul>
-    				    <li >
-    				      <a href="musicList.html" class="item-link item-content">
-    				        <div class="item-media"><i class="icon fas fa-music fa-lg" style="color:Tomato"></i></div>
-    				        <div class="item-inner" style="height:50px;padding-left:3%;">
-    				          <div class="item-title font18">音乐</div>
-    				          <div class="item-after">全部</div>
-    				        </div>
-    				      </a>
-    				    </li>
-    				    <li>
-    				      <a href="#" class="item-link item-content">
-    				        <div class="item-media"><i class="icon fas fa-book fa-lg" style="color:Tomato"></i></div>
-    				        <div class="item-inner" style="height:50px;padding-left:3%;">
-    				          <div class="item-title font18">文章</div>
-    				          <div class="item-after">全部</div>
-    				        </div>
-    				      </a>
-    				    </li>
-    				    <li>
-    				      <a href="#" class="item-link item-content">
-    				        <div class="item-media"><i class="icon fas fa-camera-retro fa-lg" style="color:Tomato"></i></div>
-    				        <div class="item-inner" style="height:50px;padding-left:2%;">
-    				          <div class="item-title font18">图片</div>
-    				          <div class="item-after">全部</div>
-    				        </div>
-    				      </a>
-    				    </li>
-    				  </ul>  
-    				</div>
-            <!-- 列表1 -->
-            <div class="list-block">
-              <ul>
-                <li>
-                  <a href="#" class="item-link item-content">
-                    <div class="item-media"><i class="icon fas fa-star fa-lg" style="color:Tomato"></i></div>
-                    <div class="item-inner" style="height:50px;padding-left:1%;">
-                      <div class="item-title font18">每日推荐</div>
-                      <div class="item-after">全部</div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-	        </div>
-        </div>
-        <!-- Bottom Toolbar-->
-        <div class="toolbar tabbar tabbar-labels">
-          <div class="toolbar-inner">
-              <a href="index.html" class="tab-link">
-                  <i class="icon fas fa-home fa-lg"></i>
-                  <span class="tabbar-label">首页</span>
-              </a>
-              <a href="find.html" class="tab-link">
-                  <i class="icon far fa-compass fa-lg" style="color:Tomato"></i>
-                  <span class="tabbar-label redColor">发现</span>
-              </a>
-              <a href="javascript:;" class="tab-link open-about click_pop">
-                  <i class="icon fas fa-plus-square fa-2x" style="color:Tomato"></i>  
-              </a>
-              <a href="community.html" class="tab-link">
-                  <i class="icon fas fa-bars fa-lg"></i>
-                  <span class="tabbar-label">社区</span>
-              </a>
-              <a href="my.html" class="tab-link">
-                  <i class="icon fas fa-user fa-lg"></i>
-                  <span class="tabbar-label">我的</span>
-              </a>
+      </div>
+      <div class="pages navbar-through toolbar-through whiteBGColor">
+        <div class="page-content">
+        	<div class="list-block">
+  				  <ul>
+  				    <li >
+  				      <a href="musicList.html" class="external item-link item-content">
+  				        <div class="item-media"><i class="icon fas fa-music fa-lg" style="color:Tomato"></i></div>
+  				        <div class="item-inner" style="height:50px;padding-left:3%;">
+  				          <div class="item-title font18">音乐</div>
+  				          <div class="item-after">全部</div>
+  				        </div>
+  				      </a>
+  				    </li>
+  				    <li>
+  				      <a href="wenzhang.html" class="external item-link item-content">
+  				        <div class="item-media"><i class="icon fas fa-book fa-lg" style="color:Tomato"></i></div>
+  				        <div class="item-inner" style="height:50px;padding-left:3%;">
+  				          <div class="item-title font18">文章</div>
+  				          <div class="item-after">全部</div>
+  				        </div>
+  				      </a>
+  				    </li>
+  				    <li>
+  				      <a href="tupian.html" class="external item-link item-content">
+  				        <div class="item-media"><i class="icon fas fa-camera-retro fa-lg" style="color:Tomato"></i></div>
+  				        <div class="item-inner" style="height:50px;padding-left:2%;">
+  				          <div class="item-title font18">图片</div>
+  				          <div class="item-after">全部</div>
+  				        </div>
+  				      </a>
+  				    </li>
+  				  </ul>  
+  				</div>
+          <!-- 列表1 -->
+          <div class="list-block">
+            <ul>
+              <li>
+                <a href="#" class="external item-link item-content">
+                  <div class="item-media"><i class="icon fas fa-star fa-lg" style="color:Tomato"></i></div>
+                  <div class="item-inner" style="height:50px;padding-left:1%;">
+                    <div class="item-title font18">每日推荐</div>
+                    <div class="item-after">全部</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div><!-- toolbar end -->
-       </div>
+        </div>
+      </div>
+      <!-- Bottom Toolbar-->
+      <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner">
+            <a href="index.html" class="external tab-link">
+                <i class="icon fas fa-home fa-lg"></i>
+                <span class="tabbar-label">首页</span>
+            </a>
+            <a href="find.html" class="external tab-link">
+                <i class="icon far fa-compass fa-lg" style="color:Tomato"></i>
+                <span class="tabbar-label redColor">发现</span>
+            </a>
+            <a href="javascript:;" class="tab-link open-about click_pop">
+                <i class="icon fas fa-plus-square fa-2x" style="color:Tomato"></i>  
+            </a>
+            <a href="community.html" class="external tab-link">
+                <i class="icon fas fa-bars fa-lg"></i>
+                <span class="tabbar-label">社区</span>
+            </a>
+            <a href="my.html" class="external tab-link">
+                <i class="icon fas fa-user fa-lg"></i>
+                <span class="tabbar-label">我的</span>
+            </a>
+        </div>
+      </div><!-- toolbar end -->
      </div>
-    <script type="text/javascript">
-      $(function(){
-            $(".click_pop").click(function(){
-                $(".pop").show()
-                // $(".yaoqing").show()
-            })
-            $(".pop").click(function(){
-                $(".pop").hide()
-                // $(".tishi").show()
-            })
-        })
-    </script>
-    <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
-    <script type="text/javascript" src="js/framework7.min.js"></script>
-    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+   </div>
+  <script type="text/javascript">
+    $(function(){
+          $(".click_pop").click(function(){
+              $(".pop").show()
+              // $(".yaoqing").show()
+          })
+          $(".pop").click(function(){
+              $(".pop").hide()
+              // $(".tishi").show()
+          })
+      })
+  </script>
+  <!-- Path to Framework7 Library JS-->
+  <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+  <script type="text/javascript" src="js/framework7.min.js"></script>
+  <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+  <script>
+    // 搜索弹出搜索框
+    var myApp = new Framework7();            
+    var $$ = Dom7;
+    var autocompleteStandalonePopup = myApp.autocomplete({
+      openIn: 'popup', //open in popup
+      opener: $$('#autocomplete-standalone-popup'), //link that opens autocomplete
+      backOnSelect: true, //go back after we select something
+      source: function (autocomplete, query, render) {
+          var results = [];
+          if (query.length === 0) {
+              render(results);
+              return;
+          }
+          // Find matched items
+          for (var i = 0; i < fruits.length; i++) {
+              if (fruits[i].toLowerCase().indexOf(query.toLowerCase()) >= 0) results.push(fruits[i]);
+          }
+          // Render items by passing array with result items
+          render(results);
+      },
+      onChange: function (autocomplete, value) {
+          // Add item text value to item-after
+          $$('#autocomplete-standalone-popup').find('.item-after').text(value[0]);
+          // Add item value to input value
+          $$('#autocomplete-standalone-popup').find('input').val(value[0]);
+      }
+    });
+    //幻灯片 1 Slide Per View, 50px Between
+    var mySwiper1 = myApp.swiper('.swiper-1', {
+      pagination:'.swiper-1 .swiper-pagination',
+      spaceBetween: 50,
+      speed:500
+    });
+  </script>
 </body>
 </html>
