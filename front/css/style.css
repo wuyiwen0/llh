@@ -10,6 +10,9 @@
 .whiteBGColor{
 	background: #ffffff;
 }
+.grayBGColor{
+	background: #E0E0E0;
+}
 /*facebook-card*/
 .card-header{
 	height: 54px;
