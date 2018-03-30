@@ -124,16 +124,16 @@
                 </div>
                 <div class="card-footer">
                   <a href="#" class="link">
-                   <i class="fas fa-share-square"></i>
-                   <span>&nbsp;转发</span>
+                   <i class="fas fa-share-square"></i>&nbsp;
+                   <span>转发</span>
                   </a>
                   <a href="#" class="link">
-                    <i class="far fa-comment-alt"></i>
-                    <span>&nbsp;评论</span>
+                    <i class="far fa-comment-alt"></i>&nbsp;
+                    <span>评论</span>
                   </a>
-                  <a href="#" class="link">
-                    <i class="far fa-thumbs-up"></i>
-                    <span>&nbsp;点赞</span>
+                  <a href="#" class="link thumbs">
+                    <i class="far fa-thumbs-up"></i>&nbsp;
+                    <span>11</span>
                   </a>
                 </div>
               </div> 
@@ -160,16 +160,16 @@
                 </div>
                 <div class="card-footer">
                   <a href="#" class="link">
-                   <i class="fas fa-share-square"></i>
-                   <span>&nbsp;转发</span>
+                   <i class="fas fa-share-square"></i>&nbsp;
+                   <span>转发</span>
                   </a>
                   <a href="#" class="link">
-                    <i class="far fa-comment-alt"></i>
-                    <span>&nbsp;评论</span>
+                    <i class="far fa-comment-alt"></i>&nbsp;
+                    <span>评论</span>
                   </a>
-                  <a href="#" class="link">
-                    <i class="far fa-thumbs-up"></i>
-                    <span>&nbsp;点赞</span>
+                  <a href="#" class="link thumbs">
+                    <i class="far fa-thumbs-up"></i>&nbsp;
+                    <span>点赞</span>
                   </a>
                 </div>
               </div> 
@@ -264,6 +264,36 @@
         //banner幻灯大小
         var imgWidth = $(".imgW").width();
         $(".imgW").height(imgWidth*0.5);
+
+        //点赞效果变换
+        $(".thumbs").click(function(){
+          var thumbs = $(this).children("svg");
+          var thumnum = $(this).children("span").text();
+          console.log(thumnum);
+          if (thumbs.attr("data-prefix") == "far") {
+            thumbs.attr("data-prefix","fas");
+            thumbs.attr("style","color:red");
+            if(thumnum == "点赞"){
+              $(this).children("span").text("1");
+            }else{
+              thumnum = parseInt(thumnum);
+              thumnum = thumnum + 1;
+              console.log(thumnum);
+              $(this).children("span").text(thumnum);
+            }
+          }else{
+            thumbs.attr("data-prefix","far");
+            thumbs.attr("style","");
+            if (thumnum == "1") {
+              $(this).children("span").text("点赞");
+            }else{
+              thumnum = parseInt(thumnum);
+              thumnum = thumnum - 1;
+              console.log(thumnum);
+              $(this).children("span").text(thumnum);
+            }
+          }
+        });
       })
     </script>
   </body>
