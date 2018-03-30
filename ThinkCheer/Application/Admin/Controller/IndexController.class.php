@@ -3,12 +3,12 @@ namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends Controller {
 	//构造函数。判断是否登录
-		// public function __construct() {
-		// 	parent::__construct();
-		// 	if (!isAdminLogin()) {
-		// 		$this->redirect("Login/login");
-		// 	}
-		// }
+		public function __construct() {
+			parent::__construct();
+			if (!isAdminLogin()) {
+				$this->redirect("Login/login");
+			}
+		}
 
 		public function index(){
 			$this->display();
