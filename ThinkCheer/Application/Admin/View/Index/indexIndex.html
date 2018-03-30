@@ -28,8 +28,8 @@
                         <div class="row row-sm text-center">
                             <div class="col-xs-6">
                                 <div class="panel padder-v item">
-                                    <div class="h1 text-info font-thin h1">{$menuNum}</div>
-                                    <span class="text-muted text-xs">累计菜谱量</span>
+                                    <div class="h1 text-info font-thin h1">521</div>
+                                    <span class="text-muted text-xs">同比增长</span>
                                     <div class="top text-right w-full">
                                         <i class="fa fa-caret-down text-warning m-r-sm"></i>
                                     </div>
@@ -37,8 +37,8 @@
                             </div>
                             <div class="col-xs-6">
                                 <div class="panel padder-v item bg-info">
-                                    <div class="h1 text-fff font-thin h1">{$vedioNum}</div>
-                                    <span class="text-muted text-xs">累计直播量</span>
+                                    <div class="h1 text-fff font-thin h1">521</div>
+                                    <span class="text-muted text-xs">今日累计访问量</span>
                                     <div class="top text-right w-full">
                                         <i class="fa fa-caret-down text-warning m-r-sm"></i>
                                     </div>
@@ -46,17 +46,16 @@
                             </div>
                             <div class="col-xs-6">
                                 <div class="panel padder-v item bg-primary">
-                                    <div class="h1 text-fff font-thin h1">{$workNum}</div>
-                                    <span class="text-muted text-xs">累计作品量</span>
+                                    <div class="h1 text-fff font-thin h1">521</div>
+                                    <span class="text-muted text-xs">注册数量</span>
                                     <div class="top text-right w-full">
                                         <i class="fa fa-caret-down text-warning m-r-sm"></i>
                                     </div>
                                 </div>
                             </div>
-                            <!-- uer的总数 -->
                             <div class="col-xs-6">
                                 <div class="panel padder-v item">
-                                    <div class="font-thin h1">{$userNum}</div>
+                                    <div class="font-thin h1">$129</div>
                                     <span class="text-muted text-xs">累计注册量</span>
                                     <div class="bottom text-left">
                                         <i class="fa fa-caret-up text-warning m-l-sm"></i>
@@ -68,6 +67,9 @@
                    <!--  右边的图 -->
                     <div class="col-sm-8">
                         <div class="ibox float-e-margins">
+                            <!-- <div class="ibox-title" style="border-bottom:none;background:#fff;">
+                                <h5>用户在线量监控</h5>
+                            </div> -->
                             <div class="ibox-content" style="border-top:none;">
                                 <div id="leftChart" style="height:259px;">
                                 </div>
@@ -93,7 +95,7 @@
                             <div class="ibox-content" style="border-top:none;background-color:#e4eaec;">
                                 <h5>新增用户</h5>
                                 <div class="progress progress-striped active">
-                                    <div style="width: 20%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar">
+                                    <div style="width: 75%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar">
                                         <span class="sr-only"></span>
                                     </div>
                                 </div>
@@ -141,15 +143,6 @@
      <script type="text/javascript">
          var myChart1 = echarts.init(document.getElementById('rightChart'),'macarons');
          var myChart2 = echarts.init(document.getElementById('leftChart'),'macarons');
-        
-         var workdate = new Date();
-         var time = workdate.getFullYear();
-         var time1 = workdate.getFullYear()-6;
-         var time2 = workdate.getFullYear()-5;
-         var time3 = workdate.getFullYear()-4;
-         var time4 = workdate.getFullYear()-3;
-         var time5 = workdate.getFullYear()-2;
-         var time6 = workdate.getFullYear()-1;
 
 
          option1 = {
@@ -160,7 +153,7 @@
                 trigger: 'axis'
             },
             legend: {
-                data:['作品量']
+                data:['新增用户','流失用户','潜在用户','往年用户','固定用户']
             },
             toolbox: {
                 feature: {
@@ -177,7 +170,7 @@
                 {
                     type : 'category',
                     boundaryGap : false,
-                    data : [time1,time2,time3,time4,time5,time6,time]
+                    data : ['2003年','2004年','2005年','2006年','2007年','2008年','2009年']
                 }
             ],
             yAxis : [
@@ -187,7 +180,35 @@
             ],
             series : [
                 {
-                    name:'作品量',
+                    name:'新增用户',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:[120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name:'流失用户',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:[220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name:'潜在用户',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:[150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name:'往年用户',
+                    type:'line',
+                    stack: '总量',
+                    areaStyle: {normal: {}},
+                    data:[320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name:'固定用户',
                     type:'line',
                     stack: '总量',
                     label: {
@@ -197,13 +218,12 @@
                         }
                     },
                     areaStyle: {normal: {}},
-                    data:[{$articleNum1}, {$articleNum2},{$articleNum3},{$articleNum4}, {$articleNum5},{$articleNum6}, {$articleNum}]
+                    data:[820, 932, 901, 934, 1290, 1330, 1320]
                 }
             ]
         };
 
-
-       option2 = {
+        option2 = {
             title: {
             text: '用户年龄层'
             },
@@ -223,7 +243,7 @@
             xAxis : [
                 {
                     type : 'category',
-                    data : ['50前', '50后', '60后', '70后', '80后', '90后', '00后'],
+                    data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
                     axisTick: {
                         alignWithLabel: true
                     }
@@ -236,19 +256,15 @@
             ],
             series : [
                 {
+                    name:'直接访问',
                     type:'bar',
                     barWidth: '60%',
-                    data:[{$userBirthBefor}, {$userBirth50}, {$userBirth60}, {$userBirth70}, {$userBirth80}, {$userBirth90}, {$userBirth00}]
+                    data:[10, 52, 200, 334, 390, 330, 220]
                 }
             ]
         };
-         
-     
 
- 
-   
-         
-
+       
 
 
          myChart1.setOption(option1);
