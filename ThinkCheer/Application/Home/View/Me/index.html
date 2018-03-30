@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>My App</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="css/fa-svg-with-js.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/llh.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <style>
+    .pop{
+      display: none;
+    }
+  </style>
+</head>
+<!-- 遮罩层 -->
+  <div class="pop">
+    <h3 class="biao">发布新的</h3>
+    <div class="pai">
+     <div>
+        <a href="fawen.html" class="external">
+          <img src="img/fa1.jpg" width="50%" />
+          <p>文章</p>
+        </a>
+      </div>
+      <div>
+        <a href="" class="external">
+          <img src="img/fa2.png" width="50%" />
+          <p>图片</p>
+        </a>
+      </div>
+      <div>
+        <a href="musicPublish.html" class="external">
+          <img src="img/fa1.jpg" width="50%" />
+          <p>音乐</p>
+        </a>
+      </div>
+      <div>
+        <a href="communityPublish.html" class="external">
+          <img src="img/fa2.png" width="50%" />
+          <p>动态</p>
+        </a>
+      </div>
+    </div>
+  </div>
+<!-- 遮罩层 end-->
+<body>
+	 <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views whiteBGColor">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main whiteBGColor">
+        <!-- Top Navbar-->
+        <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+          	<div class="left">
+          		<a href="#" class="grayColor"><i class="fas fa-cog"></i></a> 
+          	</div>
+            <div class="center sliding">我的</div>
+            <div class="right">
+              <a href="musicPlay.html" class="external grayColor"><i class="fas fa-music"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through whiteBGColor">
+	        <div class="page-content">
+	        	<!-- <div class="card">            
+              <div class="card-content">
+                <div class="list-block media-list">
+                  <ul>
+                    <li class="item-content row">
+                    <div class="col-80">
+                        <div class="item-media">
+                          <img src="img/2.jpg" width="80" height="80" style=" border-radius:50%">
+                        </div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">用户名</div>
+                          </div>
+                          <div class="item-subtitle grayColor font11">
+                            <p>个人简介：暂无简介</p>
+                          </div>
+                        </div>
+                    </div> 
+                    <div class="col-20">
+                      <a href=""><i class="fas fa-angle-right "></i></a>
+                    </div>
+                      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div> --> 
+            <!-- <div class="card"> -->
+              <!-- <div class="card-content"> -->
+                <div class="row list-block media-list" style="border-bottom-style:solid;border-width:thin;border-color: #E0E0E0;margin-bottom:1px">
+                  <div class="col-5"></div>
+                  <div class="col-33">
+                    <img src="img/2.jpg" width="100%" style="border-radius:50%" id="userImg">
+                  </div>
+                  <div class="col-50">
+                     <div class="item-title-row">
+                        <!--item-title有黑体字的作用-->
+                        <div class="item-title font18">用户名</div>
+                      </div>
+                      <div class="item-subtitle grayColor font11">
+                        <p>个人简介：暂无简介</p>
+                      </div>
+                  </div>
+                  <div class="col-5" style="padding-top:6%">
+                    <a href="meContent.html" class="external grayColor">
+                      <i class="fas fa-angle-right fa-2x"></i>
+                    </a>
+                  </div>
+                  <div class="col-10"></div>
+                </div>
+                <div class="row" style="border-bottom-style:solid;border-width:thin;border-color: #E0E0E0;padding:1% 0;">
+                  <div class="col-33">
+                    <a href="mePublished.html" class="external blackColor">
+                      <h3 style="text-align:center;">
+                        8
+                      </h3>
+                      <h3 style="text-align:center;">
+                        发布
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="col-33">
+                    <a href="myfollow.html" class="external blackColor">
+                      <h3 style="text-align:center;">
+                        8
+                      </h3>
+                      <h3 style="text-align:center;">
+                        关注
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="col-33">
+                    <a href="myfans.html" class="external blackColor">
+                      <h3 style="text-align:center;">
+                        8
+                      </h3>
+                      <h3 style="text-align:center;">
+                        粉丝
+                      </h3>
+                    </a>
+                  </div>
+                </div>
+                <!-- 列表1 -->
+                <div class="list-block">
+                  <ul>
+                    <li>
+                      <a href="myCollection.html" class="external item-link item-content">
+                        <!-- <div class="item-media"><i class="icon icon-f7"></i></div> -->
+                        <div class="item-inner">
+                          <div class="item-title">我的收藏</div>
+                          <!-- <div class="item-after">Label</div> -->
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <!-- <div class="item-media"><i class="icon icon-f7"></i></div> -->
+                        <div class="item-inner">
+                          <div class="item-title">我的缓存</div>
+                          <!-- <div class="item-after"><span class="badge">5</span></div> -->
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <!-- <div class="item-media"><i class="icon icon-f7"></i></div> -->
+                        <div class="item-inner">
+                          <div class="item-title">我的订阅</div>
+                          <!-- <div class="item-after">Another label</div> -->
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- <div class="list-block-label">List block label text goes here</div> -->
+                </div>
+                <!-- 列表2 -->
+                <div class="list-block">
+                  <ul>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <!-- <div class="item-media"><i class="icon icon-f7"></i></div> -->
+                        <div class="item-inner">
+                          <div class="item-title">我的消息</div>
+                          <div class="item-after"><span class="badge theme-red">6</span></div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 列表3 -->
+                <div class="list-block">
+                  <ul>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <!-- <div class="item-media"><i class="icon icon-f7"></i></div> -->
+                        <div class="item-inner">
+                          <div class="item-title">定时关闭</div>
+                          <!-- <div class="item-after">Label</div> -->
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <!-- <div class="item-media"><i class="icon icon-f7"></i></div> -->
+                        <div class="item-inner">
+                          <div class="item-title">意见反馈</div>
+                          <!-- <div class="item-after">Label</div> -->
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <!-- <div class="item-media"><i class="icon icon-f7"></i></div> -->
+                        <div class="item-inner">
+                          <div class="item-title">账号绑定</div>
+                          <!-- <div class="item-after">Label</div> -->
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- 列表end -->
+
+                <!-- <div class="list-block media-list">
+                  <ul>
+                    <li>
+                      <a href="#" class="item-link item-content">
+                        <div class="item-media">
+                          <img src="img/2.jpg" width="80" height="80" style=" border-radius:50%">
+                        </div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">用户名</div>
+                          </div>
+                          <div class="item-subtitle grayColor font11">
+                            <p>个人简介：暂无简介</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div> -->
+              <!-- </div> -->
+            <!-- </div> -->
+	        </div>
+	    </div>
+
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+              <a href="index.html" class="external tab-link">
+                  <i class="icon fas fa-home fa-lg"></i>
+                  <span class="tabbar-label">首页</span>
+              </a>
+              <a href="find.html" class="external tab-link">
+                  <i class="icon far fa-compass fa-lg"></i>
+                  <span class="tabbar-label">发现</span>
+              </a>
+              <a href="javascript:;" class="tab-link open-about click_pop">
+                  <i class="icon fas fa-plus-square fa-2x" style="color:Tomato"></i>  
+              </a>
+              <a href="community.html" class="external tab-link">
+                  <i class="icon fas fa-bars fa-lg"></i>
+                  <span class="tabbar-label">社区</span>
+              </a>
+              <a href="my.html" class="external tab-link">
+                  <i class="icon fas fa-user fa-lg" style="color:Tomato"></i>
+                  <span class="tabbar-label redColor">我的</span>
+              </a>
+          </div>
+        </div><!-- toolbar end -->
+      </div>
+     </div>
+
+	<script type="text/javascript">
+      $(function(){
+            $(".click_pop").click(function(){
+                $(".pop").show()
+                // $(".yaoqing").show()
+            })
+            $(".pop").click(function(){
+                $(".pop").hide()
+                // $(".tishi").show()
+            })
+        })
+    </script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //实现用户头像正方形
+        var imgWidth = $("#userImg").width();
+        $("#userImg").height(imgWidth);
+      })
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>My App</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="css/fa-svg-with-js.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views whiteBGColor">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main whiteBGColor">
+        <!-- Top Navbar-->
+        <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+          	<div class="left">
+          		<a href="javascript:history.go(-1)" class="external blackColor"><i class="fas fa-angle-left fa-lg"></i><span> 我</span></a>
+          	</div>
+            <div class="center sliding">编辑我的资料</div>
+            <div class="right">
+            	<a href="" class="redColor">保存</a>
+            </div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through whiteBGColor">
+	        <div class="page-content">
+	        	<div class="list-block">
+				  <ul>
+				    <!-- Text inputs -->
+				    <li>
+				      <div class="item-content">
+				        <div class="item-media"><i class="icon icon-form-name"></i></div>
+				        <div class="item-inner">
+				          <div class="item-title label">用户名</div>
+				          <div class="item-input">
+				            <input type="text" placeholder="Your name">
+				          </div>
+				        </div>
+				      </div>
+				    </li>
+				    <li>
+				      <div class="item-content">
+				        <div class="item-media"><i class="icon icon-form-email"></i></div>
+				        <div class="item-inner">
+				          <div class="item-title label">E-mail</div>
+				          <div class="item-input">
+				            <input type="email" placeholder="E-mail">
+				          </div>
+				        </div>
+				      </div>
+				    </li>
+				    <!-- Select -->
+				    <li>
+				      <div class="item-content">
+				        <div class="item-media"><i class="icon icon-form-gender"></i></div>
+				        <div class="item-inner">
+				          <div class="item-title label">性别</div>
+				          <div class="item-input">
+				            <select>
+				              <option>女</option>
+				              <option>男</option>
+				            </select>
+				          </div>
+				        </div>
+				      </div>
+				    </li>
+				    <!-- Date -->
+				    <li>
+				      <div class="item-content">
+				        <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+				        <div class="item-inner">
+				          <div class="item-title label">出生日期</div>
+				          <div class="item-input">
+				            <input type="date" placeholder="Birth day" value="2014-04-30">
+				          </div>
+				        </div>
+				      </div>
+				    </li>
+				    <!-- Textarea -->
+				    <li class="align-top">
+				      <div class="item-content">
+				        <div class="item-media"><i class="icon icon-form-comment"></i></div>
+				        <div class="item-inner">
+				          <div class="item-title label">个人简介</div>
+				          <div class="item-input">
+				            <textarea placeholder="说一句话来形容自己吧"></textarea>
+				          </div>
+				        </div>
+				      </div>
+				    </li>
+				  </ul>
+				</div>
+	        </div>
+	    </div>
+
+	  </div>
+	</div>
+<!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+</body>
+</html>

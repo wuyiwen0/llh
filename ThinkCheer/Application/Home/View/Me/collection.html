@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>My App</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="css/fa-svg-with-js.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/llh.css">
+</head>
+<body class="theme-red">
+<!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Views-->
+    <div class="views whiteBGColor">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main whiteBGColor">
+        <!-- Top Navbar-->
+        <div class="navbar whiteBGColor">
+          <div class="navbar-inner">
+          	<div class="left">
+          		<a href="javascript:history.go(-1)" class="external"><i class="fas fa-angle-left fa-lg blackColor"></i><span class="blackColor"> 我</span></a>
+          	</div>
+            <div class="center sliding">我的</div>
+            <div class="right">
+              <a href="musicPlay.html" class="grayColor"><i class="fas fa-music blackColor"></i></a>
+            </div>
+            <!-- Sub navbar -->
+	        <div class="subnavbar">
+	          <div class="buttons-row">
+	            <a href="#tab1" class="button tab-link active">推荐</a>
+	            <a href="#tab2" class="button tab-link">图片</a>
+	            <a href="#tab3" class="button tab-link">文章</a>
+	            <a href="#tab4" class="button tab-link">音乐</a>
+	            <a href="#tab5" class="button tab-link">动态</a>
+	          </div>
+	        </div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through whiteBGColor">
+	      <!-- Pag has additional "with-subnavbar" class -->
+	      <div data-page="home" class="page with-subnavbar">
+	        <div class="page-content hide-bars-on-scroll">
+	          <div class="tabs">
+	          	<!-- 每日推荐收藏 -->
+	            <div id="tab1" class="tab active">
+	              <!-- <div class="content-block"> -->
+	                <ul>
+			            <li>
+				            <div class="card demo-card-header-pic">
+							  <div style="background:url(img/1.jpg) center no-repeat;background-size:cover;height:160px" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+							  <div class="card-content">
+							    <div class="card-content-inner">
+							      <p class="color-gray">Posted on January 21, 2015</p>
+							      <p>Quisque eget vestibulum nulla...</p>
+							    </div>
+							  </div>
+							  <div class="card-footer">
+							    <a href="#" class="link">
+				                    <i class="far fa-thumbs-up grayColor"></i>
+				                    <span class="grayColor">&nbsp;点赞</span>
+				                </a>
+				                <a href="#" class="link">
+				                    <i class="far fa-comment-alt grayColor"></i>
+				                    <span class="grayColor">&nbsp;评论</span>
+				                </a>
+							    <a href="#" class="link">更多 >></a>
+							  </div>
+							</div><!--1-->
+						</li>
+						<li>
+							<div class="card demo-card-header-pic">
+							  <div style="background:url(img/1.jpg) center no-repeat;background-size:cover;height:160px" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+							  <div class="card-content">
+							    <div class="card-content-inner">
+							      <p class="color-gray">Posted on January 21, 2015</p>
+							      <p>Quisque eget vestibulum nulla...</p>
+							    </div>
+							  </div>
+							  <div class="card-footer">
+							    <a href="#" class="link">
+				                    <i class="far fa-thumbs-up grayColor"></i>
+				                    <span class="grayColor">&nbsp;点赞</span>
+				                </a>
+				                <a href="#" class="link">
+				                    <i class="far fa-comment-alt grayColor"></i>
+				                    <span class="grayColor">&nbsp;评论</span>
+				                </a>
+							    <a href="#" class="link">更多 >></a>
+							  </div>
+							</div><!--2-->
+						</li>
+						<li>
+							<div class="card demo-card-header-pic">
+							  <div style="background:url(img/1.jpg) center no-repeat;background-size:cover;height:160px" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+							  <div class="card-content">
+							    <div class="card-content-inner">
+							      <p class="color-gray">Posted on January 21, 2015</p>
+							      <p>Quisque eget vestibulum nulla...</p>
+							    </div>
+							  </div>
+							  <div class="card-footer">
+							    <a href="#" class="link">
+				                    <i class="far fa-thumbs-up grayColor"></i>
+				                    <span class="grayColor">&nbsp;点赞</span>
+				                </a>
+				                <a href="#" class="link">
+				                    <i class="far fa-comment-alt grayColor"></i>
+				                    <span class="grayColor">&nbsp;评论</span>
+				                </a>
+							    <a href="#" class="link">更多 >></a>
+							  </div>
+							</div><!--2-->
+						</li>
+					</ul>
+	              <!-- </div> -->
+	            </div>
+	            <!-- 图片推荐 -->
+	            <div id="tab2" class="tab">
+	              <!-- <div class="content-block"> -->
+	                <ul>
+	                	<li>
+	                		<div class="card facebook-card">
+							  <div class="card-header no-border">
+							    <div class="facebook-avatar"><img src="img/2.jpg" width="34" height="34"></div>
+							    <div class="facebook-name">John Doe</div>
+							    <div class="facebook-date">Monday at 3:47 PM</div>
+							  </div>
+							  <div class="card-content"><img src="img/2.jpg" width="100%"></div>
+							  <div class="card-footer no-border">
+							    <a href="#" class="link">
+				                   <i class="fas fa-share-square"></i>
+				                   <span>&nbsp;转发</span>
+				                </a>
+				                <a href="#" class="link">
+				                    <i class="far fa-comment-alt"></i>
+				                    <span>&nbsp;评论</span>
+				                </a>
+				                <a href="#" class="link">
+				                    <i class="far fa-thumbs-up"></i>
+				                    <span>&nbsp;点赞</span>
+				                </a>
+							  </div>
+							</div>
+	                	</li>
+	                	<li>
+	                		<div class="card facebook-card">
+							  <div class="card-header no-border">
+							    <div class="facebook-avatar"><img src="img/2.jpg" width="34" height="34"></div>
+							    <div class="facebook-name">John Doe</div>
+							    <div class="facebook-date">Monday at 3:47 PM</div>
+							  </div>
+							  <div class="card-content"><img src="img/2.jpg" width="100%"></div>
+							  <div class="card-footer no-border">
+							    <a href="#" class="link">
+				                   <i class="fas fa-share-square"></i>
+				                   <span>&nbsp;转发</span>
+				                </a>
+				                <a href="#" class="link">
+				                    <i class="far fa-comment-alt"></i>
+				                    <span>&nbsp;评论</span>
+				                </a>
+				                <a href="#" class="link">
+				                    <i class="far fa-thumbs-up"></i>
+				                    <span>&nbsp;点赞</span>
+				                </a>
+							  </div>
+							</div>
+	                	</li>
+	                </ul>
+	              <!-- </div> -->
+	            </div>
+	            <!-- 文章 -->
+	            <div id="tab3" class="tab">
+		            <ul>
+		            	<li>
+		            		<div class="card facebook-card">
+				                <div class="card-header">
+				                  <div class="fb">
+				                    <div class="facebook-avatar">
+				                      <img src="img/2.jpg" width="34" height="34">
+				                    </div>
+				                    <div class="facebook-name" style="font-size:16px">John Doe</div>
+				                    <div class="facebook-date">Monday at 2:15 PM</div>
+				                  </div>
+				                  <a href="#" class="button followBtn" style="color:Tomato;border-color: #FF5722;">关注</a>
+				                </div>
+				                <div class="card-content">
+				                  <div class="card-content-inner">
+				                    <p class="font16">What a nice photo i took yesterday!</p>
+				                    <img src="img/1.jpg" width="280" height="140">
+				                  </div>
+				                </div>
+				                <div class="card-footer">
+				                  <a href="#" class="link">
+				                   <i class="fas fa-share-square"></i>
+				                   <span>&nbsp;转发</span>
+				                  </a>
+				                  <a href="#" class="link">
+				                    <i class="far fa-comment-alt"></i>
+				                    <span>&nbsp;评论</span>
+				                  </a>
+				                  <a href="#" class="link">
+				                    <i class="far fa-thumbs-up"></i>
+				                    <span>&nbsp;点赞</span>
+				                  </a>
+				                </div>
+				            </div> 
+		            	</li>
+		            	<li>
+		            		<div class="card facebook-card">
+				                <div class="card-header">
+				                  <div class="fb">
+				                    <div class="facebook-avatar">
+				                      <img src="img/2.jpg" width="34" height="34">
+				                    </div>
+				                    <div class="facebook-name" style="font-size:16px">John Doe</div>
+				                    <div class="facebook-date">Monday at 2:15 PM</div>
+				                  </div>
+				                  <a href="#" class="button followBtn" style="color:Tomato;border-color: #FF5722;">关注</a>
+				                </div>
+				                <div class="card-content">
+				                  <div class="card-content-inner">
+				                    <p class="font16">What a nice photo i took yesterday!</p>
+				                    <img src="img/1.jpg" width="280" height="140">
+				                  </div>
+				                </div>
+				                <div class="card-footer">
+				                  <a href="#" class="link">
+				                   <i class="fas fa-share-square"></i>
+				                   <span>&nbsp;转发</span>
+				                  </a>
+				                  <a href="#" class="link">
+				                    <i class="far fa-comment-alt"></i>
+				                    <span>&nbsp;评论</span>
+				                  </a>
+				                  <a href="#" class="link">
+				                    <i class="far fa-thumbs-up"></i>
+				                    <span>&nbsp;点赞</span>
+				                  </a>
+				                </div>
+				            </div> 
+		            	</li>
+		            </ul>
+	            </div>
+	            <!-- 音乐 -->
+	            <div id="tab4" class="tab">
+	              <div class="list-block media-list" style="margin-top:2%">
+		            <ul>
+			          <li>
+			            <a href="#" class="item-link item-content">
+			              <div class="item-media"><img src="img/iup.jpg" width="44" height="44"></div>
+			              <div class="item-inner">
+			                <div class="item-title-row">
+			                  <div class="item-title">致姓名</div>
+			                </div>
+			                <div class="item-subtitle">iu(李智恩)</div>
+			              </div>
+			            </a>
+			          </li>
+			          <li>
+			            <a href="#" class="item-link item-content">
+			              <div class="item-media"><img src="img/Adele.jpg" width="44" height="44"></div>
+			              <div class="item-inner">
+			                <div class="item-title-row">
+			                  <div class="item-title">Set Fire to the Rain</div>
+			                </div>
+			                <div class="item-subtitle">Adele</div>
+			              </div>
+			            </a>
+			          </li>
+			          <li>
+			            <a href="#" class="item-link item-content">
+			              <div class="item-media"><img src="img/poster.jpg" width="44" height="44"></div>
+			              <div class="item-inner">
+			                <div class="item-title-row">
+			                  <div class="item-title">小幸运</div>
+			                </div>
+			                <div class="item-subtitle">田馥甄</div>
+			              </div>
+			            </a>
+			          </li>
+			          <li>
+			            <a href="#" class="item-link item-content">
+			              <div class="item-media"><img src="img/Adele1.jpg" width="44" height="44"></div>
+			              <div class="item-inner">
+			                <div class="item-title-row">
+			                  <div class="item-title">All I Ask</div>
+			                </div>
+			                <div class="item-subtitle">Adele</div>
+			              </div>
+			            </a>
+			          </li>
+			          <li>
+			            <a href="#" class="item-link item-content">
+			              <div class="item-media"><img src="img/Adelesome.jpg" width="44"></div>
+			              <div class="item-inner">
+			                <div class="item-title-row">
+			                  <div class="item-title">Someone Like You</div>
+			                </div>
+			                <div class="item-subtitle">Adele</div>
+			              </div>
+			            </a>
+			          </li>
+			          <li>
+			            <a href="#" class="item-link item-content">
+			              <div class="item-media"><img src="img/iuf.jpg" width="44" height="44"></div>
+			              <div class="item-inner">
+			                <div class="item-title-row">
+			                  <div class="item-title">无法入睡的夜晚</div>
+			                </div>
+			                <div class="item-subtitle">iu(李智恩)</div>
+			              </div>
+			            </a>
+			          </li>
+			        </ul>
+			      </div>
+	            </div>
+	            <!-- 动态 -->
+	            <div id="tab5" class="tab">
+		            <ul>
+		            	<li>
+		            		<div class="card facebook-card">
+				                <div class="card-header">
+				                  <div class="fb">
+				                    <div class="facebook-avatar">
+				                      <img src="img/2.jpg" width="34" height="34">
+				                    </div>
+				                    <div class="facebook-name" style="font-size:16px">John Doe</div>
+				                    <div class="facebook-date">Monday at 2:15 PM</div>
+				                  </div>
+				                  <a href="#" class="button followBtn" style="color:Tomato;border-color: #FF5722;">关注</a>
+				                </div>
+				                <div class="card-content">
+				                  <div class="card-content-inner">
+				                    <p class="font16">What a nice photo i took yesterday!</p>
+				                    <img src="img/1.jpg" width="280" height="140">
+				                  </div>
+				                </div>
+				                <!-- 音乐部分 -->
+				                <div class="list-block media-list">
+								  <ul>
+								    <li>
+									  	<div class="row list-block media-list" style="border-bottom-style:solid;border-width:thin;border-color: #E0E0E0;margin-bottom:1px;margin-top:1px">
+						                  <div class="col-5"></div>
+						                  <div class="col-20">
+						                    <img src="img/Adele.jpg" width="100%" class="userImg" style="padding-top:12%">
+						                  </div>
+						                  <div class="col-50">
+						                    <h3 style="padding-top:2%">Someone Like You</h3>
+						                    <p style="margin-top:2%">Adele</p>
+						                  </div>
+						                  <div class="col-20" style="padding-top:5%">
+						                    <a href="musicContent.html" class="external">
+						                    	<audio src="music/Adele-Someone Like You.mp3"></audio>
+						                    	<i class="fas fa-play-circle fa-lg grayColor"></i>
+						                    </a>
+						                  </div>
+						                  <div class="col-5"></div>
+						                </div>
+						            </li>
+			        			  </ul>
+			        			</div>
+			        			<!-- 音乐部分 end-->
+				                <div class="card-footer">
+				                  <a href="#" class="link">
+				                   <i class="fas fa-share-square"></i>
+				                   <span>&nbsp;转发</span>
+				                  </a>
+				                  <a href="#" class="link">
+				                    <i class="far fa-comment-alt"></i>
+				                    <span>&nbsp;评论</span>
+				                  </a>
+				                  <a href="#" class="link">
+				                    <i class="far fa-thumbs-up"></i>
+				                    <span>&nbsp;点赞</span>
+				                  </a>
+				                </div>
+				            </div>
+		            	</li>
+		            	<li>
+		            		<div class="card facebook-card">
+				                <div class="card-header">
+				                  <div class="fb">
+				                    <div class="facebook-avatar">
+				                      <img src="img/2.jpg" width="34" height="34">
+				                    </div>
+				                    <div class="facebook-name" style="font-size:16px">John Doe</div>
+				                    <div class="facebook-date">Monday at 2:15 PM</div>
+				                  </div>
+				                  <a href="#" class="button followBtn" style="color:Tomato;border-color: #FF5722;">关注</a>
+				                </div>
+				                <div class="card-content">
+				                  <div class="card-content-inner">
+				                    <p class="font16">What a nice photo i took yesterday!</p>
+				                    <img src="img/1.jpg" width="280" height="140">
+
+				                  </div>
+				                </div>
+				                <!-- 音乐部分 -->
+				                <div class="list-block media-list">
+								  <ul>
+								    <li>
+									  	<div class="row list-block media-list" style="border-bottom-style:solid;border-width:thin;border-color: #E0E0E0;margin-bottom:1px;margin-top:1px">
+						                  <div class="col-5"></div>
+						                  <div class="col-20">
+						                    <img src="img/Adele.jpg" width="100%" class="userImg" style="padding-top:12%">
+						                  </div>
+						                  <div class="col-50">
+						                    <h3 style="padding-top:2%">Someone Like You</h3>
+						                    <p style="margin-top:2%">Adele</p>
+						                  </div>
+						                  <div class="col-20" style="padding-top:5%">
+						                    <a href="musicContent.html" class="external">
+						                    	<audio src="music/Adele-Someone Like You.mp3"></audio>
+						                    	<i class="fas fa-play-circle fa-lg grayColor"></i>
+						                    </a>
+						                  </div>
+						                  <div class="col-5"></div>
+						                </div>
+						            </li>
+			        			  </ul>
+			        			</div>
+			        			<!-- 音乐部分end -->
+				                <div class="card-footer">
+				                  <a href="#" class="link">
+				                   <i class="fas fa-share-square"></i>
+				                   <span>&nbsp;转发</span>
+				                  </a>
+				                  <a href="#" class="link">
+				                    <i class="far fa-comment-alt"></i>
+				                    <span>&nbsp;评论</span>
+				                  </a>
+				                  <a href="#" class="link">
+				                    <i class="far fa-thumbs-up"></i>
+				                    <span>&nbsp;点赞</span>
+				                  </a>
+				                </div>
+				            </div>
+		            	</li>
+		            </ul>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/fontawesome-all.min.js"></script>
+    <script>var myApp = new Framework7();            </script>
+</body>
+</body>
+</html>
