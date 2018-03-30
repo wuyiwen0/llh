@@ -4,10 +4,10 @@ use Think\Controller;
 
 class AdminController extends Controller {
 	public function lists(){
-		$User = M('adminuser'); // 实例化User对象
-		$count      = $User->count();// 查询满足要求的总记录数
-		$Page       = new \Think\Page($count,6);// 实例化分页类 传入总记录数和每页显示的记录数
-		$orderby['id']='ASC';
+		$User = M('admin'); // 实例化User对象
+		$count  = $User->count();// 查询满足要求的总记录数
+		$Page   = new \Think\Page($count,6);// 实例化分页类 传入总记录数和每页显示的记录数
+		$orderby['auid']='ASC';
 
 		$list = $User->order($orderby)->limit($Page->firstRow.','.$Page->listRows)->select();
 
@@ -42,7 +42,7 @@ class AdminController extends Controller {
 	    //     $this->error($upload->getError());
 	    // }	
 		// else{
-		$adminUsersModel = D('adminuser');
+		$adminUsersModel = D('admin');
 		$data = $adminUsersModel->create();
 		// if (!$data) {
 		// 	$this->error($adminUsersModel->getError());
