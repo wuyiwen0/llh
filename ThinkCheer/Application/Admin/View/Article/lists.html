@@ -19,9 +19,10 @@
     </style>
 </head>
 <body class="gray-bg">
-    <!-- 文章管理 -->
-    <div class="row tab-pane active" style="margin-top:1%;">
-        <div class="container">
+<!-- 文章管理 -->
+<div class="row tab-pane active" style="margin-top:1%;">
+    <div class="container">
+        <form action="__MODULE__/Article/articleBatchDelete" method="post">
             <div class="row" style="padding:1% 0;border-bottom:solid 1px #E0E0E0;">
                 <div class="col-sm-8">
                     <h2>文章管理</h2>
@@ -31,81 +32,75 @@
                 </div> 
             </div>
             <div class="row" style="padding-top:1%;">
-            <table class="table table-hover table-bordered">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>
-                            标题
-                        </th>
-                        <th>
-                            作者
-                        </th>
-                         <th>
-                            发布时间
-                        </th>
-                        <th>
-                            操作
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <volist name="article" id="vl">
+                <table class="table table-hover table-bordered">
+                    <thead>
                         <tr>
-                            <td>
-                                <input type="checkbox" name="id[]" id="userCheckbox" value="{$vl.aid}">    
-                            </td>
-                            <td>
-                                <a href="__MODULE__/Article/article/id/{$vl.aid}">{$vl.title}</a>
-                            </td>
-                            <td>
-                                {$vl.username}
-                            </td> 
-                            <td>
-                                {$vl.date}
-                            </td>
-                            <td>  
-                                <button type="button" class="btn btn-link ">
-                                  <span class="glyphicon glyphicon-eye-open"></span> 审查      
-                                </button> 
-                                <a href="__MODULE__/Article/articleDelete/id/{$vl.id}">
-                                    <button type="button" class="btn btn-link ">
-                                      <span class="glyphicon  glyphicon-trash"></span> 删除     
-                                    </button>
-                                </a>
-                            </td>
+                            <th></th>
+                            <th>
+                                标题
+                            </th>
+                            <th>
+                                作者
+                            </th>
+                             <th>
+                                发布时间
+                            </th>
+                            <th>
+                                操作
+                            </th>
                         </tr>
-                    </volist>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <volist name="article" id="vl">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="id[]" id="userCheckbox" value="{$vl.aid}">    
+                                </td>
+                                <td>
+                                    <a href="__MODULE__/Article/content/id/{$vl.aid}">{$vl.title}</a>
+                                </td>
+                                <td>
+                                    {$vl.username}
+                                </td> 
+                                <td>
+                                    {$vl.date}
+                                </td>
+                                <td> 
+                                    <a href="__MODULE__/Article/content/id/{$vl.aid}"> 
+                                        <button type="button" class="btn btn-link ">
+                                          <span class="glyphicon glyphicon-eye-open"></span> 审查      
+                                        </button>
+                                    </a> 
+                                    <a href="__MODULE__/Article/articleDelete/id/{$vl.aid}">
+                                        <button type="button" class="btn btn-link ">
+                                          <span class="glyphicon  glyphicon-trash"></span> 删除     
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </volist>
+                    </tbody>
+                </table>
+            </div>           
+            <div class="row" style="padding-top:1%;border-top:solid 1px #E0E0E0;margin-top:1%;">
+                 <!--分页和添加-->
+                <div class="col-sm-1 col-sm-1 col-lg-1"></div>
+                <div class="col-sm-7 col-sm-7 col-lg-7">
+                  <div class="input-group pull-left form">
+                    <button type="submit" class="btn btn-danger">
+                      <span class="glyphicon  glyphicon-trash"></span> 批量删除     
+                    </button>
+                  </div>
+                </div> 
+                <div class="col-sm-4 col-sm-4 col-lg-4">
+                  <ul class="pagination pagination-lg">
+                      {$page}
+                  </ul>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
-    <div class="row" style="padding-top:1%;border-top:solid 1px #E0E0E0;margin-top:1%;">
-        <!--分页和添加-->
-        <div class="col-sm-1 col-sm-1 col-lg-1"></div>
-        <div class="col-sm-7 col-sm-7 col-lg-7">
-             <button type="button" class="btn btn-danger ">
-              <span class="glyphicon  glyphicon-trash"></span> 批量删除     
-            </button>  
-            <button type="button" class="btn btn-success">
-              <span class="glyphicon  glyphicon-ok"></span> 批量通过     
-            </button>
-        </div> 
-        <div class="col-sm-4 col-sm-4 col-lg-4">
-            <ul class="pagination pagination-lg">
-                <li class="disabled"><a href="#">&laquo;</a></li> 
-                <li class="active"><a href="#">1</a></li> 
-                <li><a href="#">2</a></li> 
-                <li><a href="#">3</a></li> 
-                <li><a href="#">4</a></li> 
-                <li><a href="#">5</a></li>
-                <li><a href="#">6</a></li>
-                <li><a href="#">&raquo;</a></li> 
-            </ul>
-        </div>
-    </div>
-
+</div>
     <!-- 全局js -->
     <script src="__PUBLIC__/back/js/jquery.min.js?v=2.1.4"></script>
     <script src="__PUBLIC__/back/js/bootstrap.min.js?v=3.3.6"></script>
