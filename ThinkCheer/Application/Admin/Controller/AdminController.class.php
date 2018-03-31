@@ -88,8 +88,8 @@ class AdminController extends Controller {
 	}
 
 	public function delete($id){
-		$adminUsersModel = D("adminuser");
-		$adminUsersModel->where("id = $id")->delete();
+		$adminUsersModel = D("admin");
+		$adminUsersModel->where("auid = $id")->delete();
 		$this->redirect("lists");
 	}
 
