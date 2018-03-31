@@ -5,57 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>signin</title>
-    <link rel="stylesheet" href="/github/Wplus/ThinkWplus/Public/front/css/framework7.ios.min.css">
-    <link rel="stylesheet" href="/github/Wplus/ThinkWplus/Public/front/css/framework7.ios.colors.min.css">
-    <link rel="stylesheet" href="/github/Wplus/ThinkWplus/Public/front/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/github/Wplus/ThinkWplus/Public/front/css/style.css">
-    <link rel="stylesheet" href="/github/Wplus/ThinkWplus/Public/front/css/welcomescreen.css">
-    <link rel="stylesheet" href="/github/Wplus/ThinkWplus/Public/front/css/main.css">
+    <title>注册</title>
+    <link rel="stylesheet" href="/llh/ThinkCheer/Public/front/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="/llh/ThinkCheer/Public/front/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="/llh/ThinkCheer/Public/front/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/llh/ThinkCheer/Public/front/css/llh1.css">
+    <script type="text/javascript"  src="/llh/ThinkCheer/Public/front/js/jquery.js"></script>
   </head>
   <body>
     <div class="statusbar-overlay"></div>
     <div class="views">
       <div class="view view-main">
         <!-- Top Navbar-->
-        <div class="navbar redBGColor">
+        <div class="navbar">
           <div class="navbar-inner">
-            <div class="left" style="width: 30px;"></div>
-            <div class="center whiteColor">登录</div>
-            <div class="right"><a href="/github/Wplus/ThinkWplus/index.php/Home/Signup/signup" class="external link whiteColor">注册</a></div>
+            <div class="left"><a href="#" onClick="javascript :history.back(-1);" class="greyColor"><i class=" fa fa-arrow-left"></i></a></div>
+            <div class="center redColor">注册</div>
+            <div class="right" style="width: 30px;"></div>
           </div>
         </div>
         <div class="pages navbar-through toolbar-throug">
           <div data-page="index" class="page">
             <div class="page-content whiteBGColor">
-              <form class="list-block inputList" id="form" action="/github/Wplus/ThinkWplus/index.php/Home/Signup/doSign" method="post">
-                <ul>
-                  <li>
-                    <div class="item-content">
-                      <div class="item-inner">
-                        <div class="item-input">
-                          <input type="text" placeholder="请输入手机账号" id="mobile" name="phonenum">
-                        </div>
-                      </div>
+              <form class="list-block inputList" action="/llh/ThinkCheer/index.php/Home/Signup/sendMsg" id="form" method="post">
+                <div class="item-content">
+                  <span class="areaCode" style="width:90px">手机号</span>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" placeholder="请填入手机号" id="mobile" name="mobile">
                     </div>
-                  </li>
-                  <li>
-                    <div class="item-content">
-                      <div class="item-inner bottomBorder">
-                        <div class="item-input">
-                          <input type="password" placeholder="请输入密码" id="password" name="password">
-                        </div>
-                      </div>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <span class="areaCode" style="width:90px">用户名</span>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" placeholder="请输入用户名" id="username" name="username">
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <span class="areaCode" style="width:90px" >密&#12288码</span>
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" placeholder="请设置密码" id="password" name="password">
+                    </div>
+                  </div>
+                </div>
               </form>
-              <div class="rightFloat problemLink">
-                <a href="#" class="link redColor">登录遇到问题？</a>
-              </div>
-              <div class="clearFloat"></div>
               <div class="sign">
-                <a href="#" class="external button signBtn" disabled="disabled" onclick="document.getElementById('form').submit();return false;">登录</a>
+                <a href="#" class="button signBtn" disabled="disabled" name="submit" onclick="document.getElementById('form').submit();return false;">注册</a>
               </div>
               
               <p class="greyColor clearBoth OR">OR</p>
@@ -69,11 +68,26 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="/github/Wplus/ThinkWplus/Public/front/js/framework7.min.js"></script>
-    <script type="text/javascript" src="/github/Wplus/ThinkWplus/Public/front/js/jquery-2.2.2.js"></script>
-    <script type="text/javascript" src="/github/Wplus/ThinkWplus/Public/front/js/signin.js"></script>
-    <script type="text/javascript" src="/github/Wplus/ThinkWplus/Public/front/js/welcomescreen.js"></script>
-    <script type="text/javascript" src="/github/Wplus/ThinkWplus/Public/front/js/myapp/pages/IndexPageController.js"></script>
-    <script type="text/javascript" src="/github/Wplus/ThinkWplus/Public/front/js/myapp/init.js"></script>
+    <script type="text/javascript" src="/llh/ThinkCheer/Public/front/js/framework7.min.js"></script>
+    <script type="text/javascript" src="/llh/ThinkCheer/Public/front/js/jquery-2.2.2.js"></script>
+    <script >
+    $(document).ready(function(){
+  $("input").blur(function(){
+    var signBtn = $(".signBtn");
+    if ($("#mobile").val()!="" && $("#password").val()!="" && $("#username").val()!="") {
+      signBtn.attr("disabled",false);
+      signBtn.css({
+        "background" : "#ea4027"
+      });
+    }
+    else{
+      signBtn.attr("disabled","disabled");
+      signBtn.css({
+        "background" : "#ccc"
+      });
+    }
+  });
+});
+    </script>
   </body>
 </html>

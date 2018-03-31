@@ -7,11 +7,11 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="/github/Wplus/ThinkWplus/Public/back/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="/github/Wplus/ThinkWplus/Public/back/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="/llh/ThinkCheer/Public/back/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/llh/ThinkCheer/Public/back/css/font-awesome.css?v=4.4.0" rel="stylesheet">
 
-    <link href="/github/Wplus/ThinkWplus/Public/back/css/animate.css" rel="stylesheet">
-    <link href="/github/Wplus/ThinkWplus/Public/back/css/style.css?v=4.1.0" rel="stylesheet">
+    <link href="/llh/ThinkCheer/Public/back/css/animate.css" rel="stylesheet">
+    <link href="/llh/ThinkCheer/Public/back/css/style.css?v=4.1.0" rel="stylesheet">
     <style type="text/css">
     .form-group label{
     	font-size: 18px;
@@ -22,12 +22,12 @@
 <body>
 	<div class="container" style="border:solid 1px #E0E0E0;margin-top:1%;">
 		<h2 style="padding:1% 0;border-bottom:solid 1px #E0E0E0;">修改个人信息</h2>
-		<form action="/github/Wplus/ThinkWplus/index.php/Admin/Admin/doEdit" method="post" name="myform" enctype="multipart/form-data">  
+		<form action="/llh/ThinkCheer/index.php/Admin/Admin/doEdit" method="post" name="myform" enctype="multipart/form-data">  
 		  <div class="col-md-12" style="padding-top:1%">
 		    <div class="form-group">
 		        <label class="col-sm-3 control-label">用户名：</label>
 		        <div class="col-sm-8">
-		            <input type="text" name="username" class="form-control" placeholder="请输入用户名" value="<?php echo ($adminUsers["username"]); ?>" readonly> <span class="help-block m-b-none"></span>
+		            <input type="text" name="name" class="form-control" placeholder="请输入用户名" value="<?php echo ($adminUsers["name"]); ?>" readonly> <span class="help-block m-b-none"></span>
 		        </div>
 		    </div>
 		    <div class="form-group">
@@ -71,14 +71,14 @@
 		    <div class="form-group">
 		        <label class="col-sm-3 control-label">上传头像：</label>
 		        <div class="col-sm-8">
-		        	<img src="/github/Wplus/ThinkWplus/Public/<?php echo ($adminUsers["headimg"]); ?>" width="50px" height="50px"/>
+		        	<img src="/llh/ThinkCheer/Public/<?php echo ($adminUsers["headimg"]); ?>" width="50px" height="50px"/>
 		            <input type="file" name="headimg" class="form-control"><span class="help-block m-b-none"></span>
 		        </div>
 		    </div>
 		    <div class="form-group">
 		        <label class="col-sm-3 control-label">手机号：</label>
 		        <div class="col-sm-8">
-		            <input type="text" name="phonenum" class="form-control" placeholder="15********" value="<?php echo ($adminUsers["phonenum"]); ?>"> <span class="help-block m-b-none"></span>
+		            <input type="text" name="phone" class="form-control" placeholder="15********" value="<?php echo ($adminUsers["phone"]); ?>"> <span class="help-block m-b-none"></span>
 		        </div>
 		    </div>
 		    <div class="form-group">
@@ -98,7 +98,7 @@
 		  <div class="row" style="padding:1% 0">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
-				<input type="hidden" name="id" value="<?php echo ($adminUsers["id"]); ?>">
+				<input type="hidden" name="auid" value="<?php echo ($adminUsers["auid"]); ?>">
 				<input type="submit" class="btn  btn-primary btn-lg" style="width:100%;" value="保存"> 
 			</div>
 			<div class="col-sm-4"></div>
@@ -107,10 +107,10 @@
 	</div>
 
 	<!-- 全局js -->
-    <script src="/github/Wplus/ThinkWplus/Public/back/js/jquery.min.js?v=2.1.4"></script>
-    <script src="/github/Wplus/ThinkWplus/Public/back/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="/llh/ThinkCheer/Public/back/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/llh/ThinkCheer/Public/back/js/bootstrap.min.js?v=3.3.6"></script>
     <!-- layerDate plugin javascript -->
-    <script src="/github/Wplus/ThinkWplus/Public/back/js/plugins/layer/laydate/laydate.js"></script>
+    <script src="/llh/ThinkCheer/Public/back/js/plugins/layer/laydate/laydate.js"></script>
     <script>
         //外部js调用
         laydate({

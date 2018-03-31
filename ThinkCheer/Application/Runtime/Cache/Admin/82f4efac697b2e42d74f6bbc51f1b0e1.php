@@ -7,12 +7,11 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="/github/Wplus/ThinkWplus/Public/back/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="/github/Wplus/ThinkWplus/Public/back/css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="/github/Wplus/ThinkWplus/Public/back/css/animate.css" rel="stylesheet">
-    <link href="/github/Wplus/ThinkWplus/Public/back/css/style.css?v=4.1.0" rel="stylesheet">
-    <link href="/github/Wplus/ThinkWplus/Public/back/css/default.css" rel="stylesheet">
-    <link href="/github/Wplus/ThinkWplus/Public/back/css/Lobibox.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="/llh/ThinkCheer/Public/back/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/llh/ThinkCheer/Public/back/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="/llh/ThinkCheer/Public/back/css/animate.css" rel="stylesheet">
+    <link href="/llh/ThinkCheer/Public/back/css/style.css?v=4.1.0" rel="stylesheet">
     <style type="text/css">
     .form-group label{
     	font-size: 18px;
@@ -24,141 +23,96 @@
 	<div class="container" style="border:solid 1px #E0E0E0;margin-top:1%;">
 		<h2 style="padding:1% 0;border-bottom:solid 1px #E0E0E0;">添加管理员</h2>
 		<form action="<?php echo U('Admin/Admin/doAdd');?>" method="post" id="myform" name="myform" enctype="multipart/form-data" onsubmit="return mySubmit(true)">
-		  <div class="col-md-12" style="padding-top:1%">
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">用户名：</label>
-		        <div class="col-sm-8">
-		            <input type="text" name="username" class="form-control" placeholder="请输入用户名" id="username"> <span class="help-block m-b-none"></span>
-		        </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">真实姓名：</label>
-		        <div class="col-sm-8">
-		            <input type="text" name="realname" class="form-control" placeholder="请输入您的真实姓名"> <span class="help-block m-b-none"></span>
+			<div class="col-md-12" style="padding-top:1%">
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">用户名：</label>
+			        <div class="col-sm-8">
+			            <input type="text" name="name" class="form-control" placeholder="请输入用户名" id="name"> <span class="help-block m-b-none"></span>
 
-		        </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">密码：</label>
-		        <div class="col-sm-8">
-		            <input type="password" class="form-control" name="password" placeholder="请输入密码" id="pwd">
-		            <span class="help-block m-b-none"></span>
-		        </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">确认密码：</label>
-		        <div class="col-sm-8">
-		            <input type="password" class="form-control" name="repassword" placeholder="请输入密码" id="repwd">
-		            <span class="help-block m-b-none"></span>
-		        </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">性别：</label>
-		        <div class="col-sm-8">
-		            <label class="radio-inline">
-		                <input type="radio" checked="checked" value="男" id="optionsRadios1" name="sex">男</label>
-		            <label class="radio-inline">
-		                <input type="radio" value="女" id="optionsRadios2" name="sex">女</label>
-		            <span class="help-block m-b-none"></span>
-		        </div>
-		    </div>
-		  </div>
-		  <div class="col-md-12" style="padding-bottom:2em">
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">职位：</label>
-		        <div class="col-sm-8">
-		            <input type="text" name="position" class="form-control" placeholder="请输入您的职位"> <span class="help-block m-b-none"></span>
-		        </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">上传头像：</label>
-		        <div class="col-sm-8">
-		            <input type="file" name="headimg" class="form-control"><span class="help-block m-b-none"></span>
-		        </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">手机号：</label>
-		        <div class="col-sm-8">
-		            <input type="text" name="phonenum" class="form-control" placeholder="15********"> <span class="help-block m-b-none"></span>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">真实姓名：</label>
+			        <div class="col-sm-8">
+			            <input type="text" name="realname" class="form-control" placeholder="请输入您的真实姓名"> <span class="help-block m-b-none"></span>
 
-		        </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="col-sm-3 control-label">邮箱：</label>
-		        <div class="col-sm-8">
-		            <input type="text" name="email" class="form-control" placeholder="111111111@qq.com"> <span class="help-block m-b-none"></span>
-
-		        </div>
-		    </div>
-		    <div class="form-group">
-                <label class="col-sm-3 control-label">出生日期：</label>
-                <div class="col-sm-8">
-                    <input class="form-control layer-date" placeholder="YYYY-MM-DD" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" name="birth">
-                    <label class="laydate-icon"></label>
-                </div>
-            </div>
-		  </div>
-		  <div class="row" style="padding:1% 0">
-			<div class="col-sm-4"></div>
-			<div class="col-sm-4">
-				<input type="submit" id="basicError" class="btn  btn-primary btn-lg" style="width:100%;" value="保存"> 
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">密码：</label>
+			        <div class="col-sm-8">
+			            <input type="password" class="form-control" name="password" placeholder="请输入密码" id="pwd">
+			            <span class="help-block m-b-none"></span>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">确认密码：</label>
+			        <div class="col-sm-8">
+			            <input type="password" class="form-control" name="repassword" placeholder="请输入密码" id="repwd">
+			            <span class="help-block m-b-none"></span>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">性别：</label>
+			        <div class="col-sm-8">
+			            <label class="radio-inline">
+			                <input type="radio" checked="" value="男" id="optionsRadios1" name="sex">男</label>
+			            <label class="radio-inline">
+			                <input type="radio" value="女" id="optionsRadios2" name="sex">女</label>
+			            <span class="help-block m-b-none"></span>
+			        </div>
+			    </div>
 			</div>
-			<div class="col-sm-4"></div>
-		  </div>
+			<div class="col-md-12" style="padding-bottom:2em">
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">职位：</label>
+			        <div class="col-sm-8">
+			            <input type="text" name="position" class="form-control" placeholder="请输入您的职位"> <span class="help-block m-b-none"></span>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">上传头像：</label>
+			        <div class="col-sm-8">
+			            <input type="file" name="headimg" class="form-control"><span class="help-block m-b-none"></span>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">手机号：</label>
+			        <div class="col-sm-8">
+			            <input type="text" name="phone" class="form-control" placeholder="15********"> <span class="help-block m-b-none"></span>
+
+			        </div>
+			    </div>
+			    <div class="form-group">
+			        <label class="col-sm-3 control-label">邮箱：</label>
+			        <div class="col-sm-8">
+			            <input type="text" name="email" class="form-control" placeholder="111111111@qq.com"> <span class="help-block m-b-none"></span>
+
+			        </div>
+			    </div>
+			    <div class="form-group">
+	                <label class="col-sm-3 control-label">出生日期：</label>
+	                <div class="col-sm-8">
+	                    <input class="form-control layer-date" placeholder="YYYY-MM-DD" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" name="birth">
+	                    <label class="laydate-icon"></label>
+	                </div>
+	            </div>
+			</div>
+			<div class="row" style="padding:1% 0">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<input type="submit" id="basicError" class="btn  btn-primary btn-lg" style="width:100%;" value="保存">
+				</div>
+				<div class="col-sm-4"></div>
+			</div>
 		</form>
 	</div>
 
 	<!-- 全局js -->
-    <script src="/github/Wplus/ThinkWplus/Public/back/js/jquery.min.js?v=2.1.4"></script>
-    <script src="/github/Wplus/ThinkWplus/Public/back/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="/llh/ThinkCheer/Public/back/js/jquery.min.js?v=2.1.4"></script>
+    <script src="/llh/ThinkCheer/Public/back/js/bootstrap.min.js?v=3.3.6"></script>
     <!-- layerDate plugin javascript -->
-    <script src="/github/Wplus/ThinkWplus/Public/back/js/lobibox.min.js"></script>
-    <script>
-	function mySubmit(flag){
-		return flag;
-	}
-
-	$(function(){
-		$('#basicError').click(function () {
-			if ($("#username").val() == "") {
-				Lobibox.notify('error', {
-					msg: '用户名不能为空'
-				});
-			}
-			if ($("#pwd").val() == "") {
-				Lobibox.notify('error', {
-					msg: '密码不能为空'
-				});
-			}
-			else if ($("#repwd").val() != $("#pwd").val()){
-				Lobibox.notify('error', {
-					msg: '确认密码不正确'
-				});
-			}
-			if ($("input[type='file']").val() == "") {
-				Lobibox.notify('error', {
-					msg: '请上传头像'
-				});
-
-			}
-			if ($(".layer-date").val() == "") {
-				Lobibox.notify('error', {
-					msg: '出生日期不能为空'
-				});
-			}
-
-			$("#myform").submit(function(){
-				if ($("#username").val() == "" || $("#pwd").val() == "" || $("#repwd").val() != $("#pwd").val() || $("input[type='file']").val() == "" || $(".layer-date").val() == "") {
-					return mySubmit(false);
-				}
-				else{
-					return mySubmit(true);
-				}
-			});
-		});
-	});
-    </script>
-    <script src="/github/Wplus/ThinkWplus/Public/back/js/plugins/layer/laydate/laydate.js"></script>
+    <script src="/llh/ThinkCheer/Public/back/js/plugins/layer/laydate/laydate.js"></script>
     <script>
         //外部js调用
         laydate({
