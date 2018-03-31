@@ -58,7 +58,7 @@ class AdminController extends Controller {
 	}
 
 	public function edit($id){
-		$adminUsersModel = D("adminuser");
+		$adminUsersModel = D("admin");
 		$adminUsers = $adminUsersModel->find($id);
 		$this->assign("adminUsers",$adminUsers);
 		$this->display();
@@ -76,7 +76,7 @@ class AdminController extends Controller {
 	    //     $this->error($upload->getError());
 	    // }	
 		// else{
-		$adminUsersModel = D("adminuser");
+		$adminUsersModel = D("admin");
 		$data = $adminUsersModel->create();
 		$data['headimg'] = $info['headimg']['savepath'].$info['headimg']['savename'];
 		$adminUsersModel->save($data);
@@ -95,9 +95,9 @@ class AdminController extends Controller {
 
 	//修改个人信息
 	public function modi(){
-		$adminUsersModel = D("adminuser");
-		$condition['username'] = I("session.adminname");//获取当前用户名
-		$id = $adminUsersModel->where($condition)->getField('id');//获取当前用户id
+		$adminUsersModel = D("admin");
+		$condition['name'] = I("session.adminname");//获取当前用户名
+		$id = $adminUsersModel->where($condition)->getField('auid');//获取当前用户id
 
 		$adminUsers = $adminUsersModel->find($id);
 		$this->assign("adminUsers",$adminUsers);
